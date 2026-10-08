@@ -85,18 +85,11 @@ app.get("/api/quotes", async (req, res) => {
   res.json({ quotes: demoQuotes.slice().reverse(), mode: "demo" });
 });
 
-// ---------- Static + SPA fallback ----------
+// ---------- Static assets + 404 ----------
 const publicPath = path.join(__dirname, "..", "public");
 app.use(express.static(publicPath));
-app.get("*", (req, res) => {
-  // Try exact HTML file first for service pages
-  const file = path.join(
-    publicPath,
-    req.path === "/" ? "index.html" : req.path,
-  );
-  res.sendFile(file, (err) => {
-    if (err) res.sendFile(path.join(publicPath, "index.html"));
-  });
+app.use((_req, res) => {
+  res.status(404).type("text/plain").send("Not Found");
 });
 
 // ---------- Shared logic ----------

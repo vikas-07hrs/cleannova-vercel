@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate icon" href="/favicon.ico" />
-    <title>Professional Dry Cleaning & Laundry | Cleannova</title>
+    <title>Dry Cleaning &amp; Laundry in the Netherlands | Cleannova</title>
     <meta
       name="description"
-      content="From everyday laundry to specialist garment care — simple, stress-free and expertly done across the Channel Islands."
+      content="Dry cleaning and laundry in the Netherlands, including garment care, pressing and alterations. Explore the listed options and request a quote from Cleannova."
     />
+    <link rel="canonical" href="https://cleannova-vercel.vercel.app/dry-cleaning.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dry Cleaning &amp; Laundry in the Netherlands | Cleannova" />
+    <meta property="og:description" content="Dry cleaning and laundry in the Netherlands, including garment care, pressing and alterations. Explore the listed options and request a quote from Cleannova." />
+    <meta property="og:url" content="https://cleannova-vercel.vercel.app/dry-cleaning.html" />
+    <meta property="og:image" content="https://cleannova-vercel.vercel.app/images/service-dry-cleaning.jpg" />
+    <meta property="og:image:alt" content="Dry cleaning and garment care" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dry Cleaning &amp; Laundry in the Netherlands | Cleannova" />
+    <meta name="twitter:description" content="Dry cleaning and laundry in the Netherlands, including garment care, pressing and alterations. Explore the listed options and request a quote from Cleannova." />
+    <meta name="twitter:image" content="https://cleannova-vercel.vercel.app/images/service-dry-cleaning.jpg" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cleannova-vercel.vercel.app/dry-cleaning.html#service","name":"Dry Cleaning and Laundry","serviceType":"Dry cleaning and laundry","url":"https://cleannova-vercel.vercel.app/dry-cleaning.html","provider":{"@type":"Organization","@id":"https://cleannova-vercel.vercel.app/#organization","name":"Cleannova","url":"https://cleannova-vercel.vercel.app/"},"areaServed":{"@type":"Country","name":"Netherlands"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cleannova-vercel.vercel.app/"},{"@type":"ListItem","position":2,"name":"Dry Cleaning","item":"https://cleannova-vercel.vercel.app/dry-cleaning.html"}]}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -783,10 +795,7 @@
 </head>
   <body>
     <div class="top-bar">
-      <span
-        >Jersey's trusted property &amp; home services specialists since
-        1994</span
-      >
+      <span id="i18n-topBar">Home and property services in the Netherlands</span>
     </div>
     <header>
       <div class="container header-inner">
@@ -796,10 +805,10 @@
         >
         <nav>
           <a href="/dry-cleaning.html" class="active" data-nav="navDry"
-            >Dry Clean</a
+            >Dry Cleaning</a
           >
           <a href="/home-cleaning.html" class="" data-nav="navHome"
-            >Home Clean</a
+            >Home Cleaning</a
           >
           <a href="/maintenance.html" class="" data-nav="navMaint"
             >Maintenance</a
@@ -818,6 +827,8 @@
             color: var(--dark);
             padding: 6px 10px;
           "
+          data-i18n-en="← Home"
+          data-i18n-nl="← Home"
           >← Home</a
         >
         <div class="header-actions">
@@ -835,9 +846,6 @@
             </button>
           </div>
 
-          <a href="tel:+441534499429" class="phone" style="white-space: nowrap"
-            >📞&nbsp;01534&nbsp;499429</a
-          >
           <button class="btn-primary" onclick="openQuote()" id="i18n-freeQuote">
             FREE QUOTE
           </button>
@@ -846,30 +854,30 @@
     </header>
 
     <section class="page-hero">
-      <a class="page-hero-image-link" href="/#svc-dry" aria-label="Dry cleaning service on the homepage"><img
+      <a class="page-hero-image-link" href="/#svc-dry" aria-label="Dry cleaning service on the homepage" data-i18n-aria-en="Dry cleaning service on the homepage" data-i18n-aria-nl="Stomerijdienst op de startpagina"><img
         src="/images/service-dry-cleaning.jpg"
         alt="Professional dry cleaning service"
+        data-i18n-alt-en="Professional dry cleaning service"
+        data-i18n-alt-nl="Professionele stomerijdienst"
       /></a>
       <div class="page-hero-content">
         <div class="container">
           <div class="page-hero-text">
             <div class="breadcrumb">
-              <a href="/">Home</a> · <a href="/#services">Services</a> · Dry
-              Cleaning
+              <a href="/" data-i18n-en="Home" data-i18n-nl="Home">Home</a> · <a href="/#services" data-i18n-en="Services" data-i18n-nl="Diensten">Services</a> · <span data-i18n-en="Dry Cleaning" data-i18n-nl="Stomerij">Dry
+              Cleaning</span>
             </div>
             <div class="badge" id="i18n-tag">Dry Cleaning</div>
-            <h1 id="i18n-title">Professional Dry Cleaning & Laundry</h1>
+            <h1 id="i18n-title">Dry Cleaning and Laundry in the Netherlands</h1>
             <p id="i18n-desc">
-              From everyday laundry to specialist garment care — simple,
-              stress-free and expertly done across the Channel Islands.
+              Dry cleaning, laundry and garment care options include washing,
+              pressing, alterations and care for formalwear, leather and suede.
             </p>
             <div style="display: flex; gap: 12px; flex-wrap: wrap">
               <button class="btn-white i18n-quote" onclick="openQuote()">
                 Get a Free Quote
               </button>
-              <a href="tel:+441534499429" class="btn-outline" id="i18n-call"
-                >Call 01534 499429</a
-              >
+              <button type="button" class="btn-outline" onclick="openQuote()" id="i18n-call">Request a quote</button>
             </div>
           </div>
         </div>
@@ -881,10 +889,10 @@
         <div class="content-grid">
           <div>
             <div class="section-label" id="i18n-offer">What we offer</div>
-            <h2 class="section-title" id="i18n-included">What's included</h2>
-            <p style="color: var(--text-light); margin-bottom: 8px">
-              From everyday laundry to specialist garment care — simple,
-              stress-free and expertly done across the Channel Islands.
+            <h2 class="section-title" id="i18n-included">Available dry cleaning services</h2>
+            <p style="color: var(--text-light); margin-bottom: 8px" data-i18n-en="Choose the garment care you need and include the details in the quote request." data-i18n-nl="Kies de kledingverzorging die u nodig heeft en vermeld de details in uw offerteaanvraag.">
+              Choose the garment care you need and include the details in the
+              quote request.
             </p>
             <ul class="feature-list" id="i18n-features">
               <li>Dry cleaning for all garment types</li>
@@ -894,19 +902,17 @@
               <li>Wedding & formalwear care</li>
               <li>Leather & suede specialist treatment</li>
               <li>Commercial / bulk dry cleaning</li>
-              <li>Fast turnaround across Jersey</li>
             </ul>
           </div>
           <div>
             <div class="side-card">
               <h3 id="i18n-sideTitle">Request a free quote</h3>
               <p id="i18n-sideDesc">
-                No obligation. We'll get back to you within 24 hours.
+                Tell us what you need and send your request using the form.
               </p>
               <button class="btn-primary i18n-quote" onclick="openQuote()">
                 Get Free Quote
               </button>
-              <a href="tel:+441534499429" class="phone-big">📞 01534 499429</a>
             </div>
           </div>
         </div>
@@ -930,13 +936,13 @@
               ><div class="logo-icon">C</div>
               Cleannova</a
             >
-            <p>
-              Jersey's trusted property and home services specialist since 1994.
+            <p data-i18n-en="Home and property services in the Netherlands." data-i18n-nl="Diensten voor huis en vastgoed in Nederland.">
+              Home and property services in the Netherlands.
             </p>
-            <a href="/" aria-label="Cleannova home"><img class="footer-illustration" src="/images/cleannova-home-interior.jpg" alt="A bright, well-kept European home interior" width="320" height="160" loading="lazy"></a>
+            <a href="/" aria-label="Cleannova home" data-i18n-aria-en="Cleannova home" data-i18n-aria-nl="Startpagina van Cleannova"><img class="footer-illustration" src="/images/cleannova-home-interior.jpg" alt="A bright, well-kept European home interior" data-i18n-alt-en="A bright, well-kept European home interior" data-i18n-alt-nl="Een licht en verzorgd Europees interieur" width="320" height="160" loading="lazy"></a>
           </div>
           <div class="footer-col">
-            <h3>Services</h3>
+            <h3 data-i18n-en="Services" data-i18n-nl="Diensten">Services</h3>
             <a href="/dry-cleaning.html" data-nav="navDry">Dry Clean</a>
             <a href="/home-cleaning.html" data-nav="navHome">Home Clean</a>
             <a href="/maintenance.html" data-nav="navMaint">Maintenance</a>
@@ -945,20 +951,19 @@
             <a href="/decorating.html" data-nav="navDeco">Decorating</a>
           </div>
           <div class="footer-col">
-            <h4>Company</h4>
-            <a href="/#about">About Us</a>
-            <a href="/#contact">Contact Us</a>
-            <a href="/#privacy">Privacy Policy</a>
+            <h4 data-i18n-en="Company" data-i18n-nl="Bedrijf">Company</h4>
+            <a href="/#about" data-i18n-en="About Us" data-i18n-nl="Over ons">About Us</a>
+            <a href="/#contact" data-i18n-en="Contact Us" data-i18n-nl="Contact">Contact Us</a>
+            <a href="/#privacy" data-i18n-en="Privacy Policy" data-i18n-nl="Privacybeleid">Privacy Policy</a>
           </div>
           <div class="footer-col">
-            <h4>Contact</h4>
-            <a href="tel:+441534499429">01534 499429</a>
+            <h4 data-i18n-en="Contact" data-i18n-nl="Contact">Contact</h4>
             <a href="mailto:info@cleannova.com">info@cleannova.com</a>
           </div>
         </div>
         <div class="footer-bottom">
           <span
-            >© 2026 Cleannova. All rights reserved. · Design by
+            >© 2026 Cleannova. <span data-i18n-en="All rights reserved." data-i18n-nl="Alle rechten voorbehouden.">All rights reserved.</span> · Design by
             <a
               href="https://rakpal.com"
               target="_blank"
@@ -968,9 +973,9 @@
             ></span
           >
           <div>
-            <a href="/#privacy">Privacy</a>
-            <a href="/#cookies">Cookies</a>
-            <a href="/#terms">T&amp;Cs</a>
+            <a href="/#privacy" data-i18n-en="Privacy" data-i18n-nl="Privacy">Privacy</a>
+            <a href="/#cookies" data-i18n-en="Cookies" data-i18n-nl="Cookies">Cookies</a>
+            <a href="/#terms" data-i18n-en="T&amp;Cs" data-i18n-nl="Voorwaarden">T&amp;Cs</a>
           </div>
         </div>
       </div>
@@ -978,59 +983,66 @@
 
     <div class="modal-overlay" id="quoteModal">
       <div class="modal">
-        <button class="modal-close" onclick="closeQuote()" aria-label="Close">
+        <button class="modal-close" onclick="closeQuote()" aria-label="Close" data-i18n-aria-en="Close" data-i18n-aria-nl="Sluiten">
           ×
         </button>
         <div id="quoteForm">
-          <h3>Request a Free Quote</h3>
+          <h3 data-i18n-en="Request a Free Quote" data-i18n-nl="Vraag een gratis offerte aan">Request a Free Quote</h3>
           <p>
-            Fill in the form and we'll get back to you within 24 hours. No
-            obligation.
+            <span data-i18n-en="Complete the form to send your quote request." data-i18n-nl="Vul het formulier in om uw offerteaanvraag te versturen.">Complete the form to send your quote request.</span>
           </p>
           <form onsubmit="submitQuote(event)">
             <div class="form-group">
-              <label>Full Name *</label
+              <label data-i18n-en="Full Name *" data-i18n-nl="Volledige naam *">Full Name *</label
               ><input
                 type="text"
                 required
                 name="name"
                 placeholder="John Smith"
+                data-i18n-placeholder-en="John Smith"
+                data-i18n-placeholder-nl="Uw naam"
               />
             </div>
             <div class="form-group">
-              <label>Email *</label
+              <label data-i18n-en="Email *" data-i18n-nl="E-mailadres *">Email *</label
               ><input
                 type="email"
                 required
                 name="email"
                 placeholder="john@example.com"
+                data-i18n-placeholder-en="john@example.com"
+                data-i18n-placeholder-nl="naam@example.com"
               />
             </div>
             <div class="form-group">
-              <label>Phone</label
-              ><input type="tel" name="phone" placeholder="01534 000000" />
+              <label data-i18n-en="Phone" data-i18n-nl="Telefoon">Phone</label
+              ><input type="tel" name="phone" />
             </div>
             <div class="form-group">
-              <label>Service *</label>
+              <label data-i18n-en="Service *" data-i18n-nl="Dienst *">Service *</label>
               <select name="service" required>
-                <option value="dry">Dry Cleaning</option>
-                <option value="home">Home Cleaning</option>
-                <option value="maint">Maintenance</option>
-                <option value="elec">Electrical</option>
-                <option value="plumb">Plumbing</option>
-                <option value="deco">Decorating</option>
+                <option value="dry" data-i18n-en="Dry Cleaning" data-i18n-nl="Stomerij">Dry Cleaning</option>
+                <option value="home" data-i18n-en="Home Cleaning" data-i18n-nl="Schoonmaak">Home Cleaning</option>
+                <option value="maint" data-i18n-en="Maintenance" data-i18n-nl="Onderhoud">Maintenance</option>
+                <option value="elec" data-i18n-en="Electrical" data-i18n-nl="Elektriciteit">Electrical</option>
+                <option value="plumb" data-i18n-en="Plumbing" data-i18n-nl="Loodgieterij">Plumbing</option>
+                <option value="deco" data-i18n-en="Decorating" data-i18n-nl="Schilderwerk">Decorating</option>
               </select>
             </div>
             <div class="form-group">
-              <label>Message</label
+              <label data-i18n-en="Message" data-i18n-nl="Bericht">Message</label
               ><textarea
                 name="message"
                 placeholder="Tell us about your requirements…"
+                data-i18n-placeholder-en="Tell us about your requirements…"
+                data-i18n-placeholder-nl="Beschrijf uw aanvraag…"
               ></textarea>
             </div>
             <div class="form-consent">
               <input type="checkbox" required id="consentCheck" />
               <label for="consentCheck"
+                data-i18n-en="I agree to the processing of my data as described in the Privacy Policy."
+                data-i18n-nl="Ik ga akkoord met de verwerking van mijn gegevens zoals beschreven in het privacybeleid."
                 >I agree to the processing of my data as described in the
                 Privacy Policy.</label
               >
@@ -1050,19 +1062,19 @@
                   cursor: pointer;
                 "
               >
-                Cancel
+                <span data-i18n-en="Cancel" data-i18n-nl="Annuleren">Cancel</span>
               </button>
-              <button type="submit" class="btn-primary">Send Request</button>
+              <button type="submit" class="btn-primary" data-i18n-en="Send Request" data-i18n-nl="Verstuur aanvraag">Send Request</button>
             </div>
           </form>
         </div>
         <div class="form-success" id="quoteSuccess">
           <div class="icon">✓</div>
-          <h3>Thank you!</h3>
+          <h3 data-i18n-en="Thank you!" data-i18n-nl="Bedankt!">Thank you!</h3>
           <p>
-            We've received your request and will contact you within 24 hours.
+            <span data-i18n-en="Your request has been received." data-i18n-nl="Uw aanvraag is ontvangen.">Your request has been received.</span>
           </p>
-          <button class="btn-primary" onclick="closeQuote()">Close</button>
+          <button class="btn-primary" onclick="closeQuote()" data-i18n-en="Close" data-i18n-nl="Sluiten">Close</button>
         </div>
       </div>
     </div>
@@ -1083,8 +1095,9 @@
         e.preventDefault();
         const form = e.target;
         const btn = form.querySelector('button[type="submit"]');
+        const lang = document.documentElement.lang === "nl" ? "nl" : "en";
         btn.disabled = true;
-        btn.textContent = "Sending...";
+        btn.textContent = lang === "nl" ? "Verzenden..." : "Sending...";
         try {
           const res = await fetch("/api/quotes", {
             method: "POST",
@@ -1095,7 +1108,7 @@
               phone: form.phone.value.trim() || null,
               service: form.service.value,
               message: form.message.value.trim() || null,
-              lang: "en",
+              lang,
             }),
           });
           if (!res.ok) throw new Error("fail");
@@ -1103,10 +1116,14 @@
           document.getElementById("quoteSuccess").classList.add("show");
           form.reset();
         } catch (err) {
-          alert("Something went wrong. Please try again.");
+          alert(
+            lang === "nl"
+              ? "Er is iets misgegaan. Probeer het opnieuw."
+              : "Something went wrong. Please try again.",
+          );
         } finally {
           btn.disabled = false;
-          btn.textContent = "Send Request";
+          btn.textContent = lang === "nl" ? "Verstuur aanvraag" : "Send Request";
         }
       }
       document.getElementById("quoteModal").addEventListener("click", (e) => {
@@ -1118,11 +1135,12 @@
       (function () {
         const T = {
           en: {
+            topBar: "Home and property services in the Netherlands",
             tag: "Dry Cleaning",
-            title: "Professional Dry Cleaning & Laundry",
-            desc: "From everyday laundry to specialist garment care — simple, stress-free and expertly done across the Channel Islands.",
+            title: "Dry Cleaning and Laundry in the Netherlands",
+            desc: "Dry cleaning, laundry and garment care options include washing, pressing, alterations and care for formalwear, leather and suede.",
             offerLabel: "What we offer",
-            included: "What's included",
+            included: "Available dry cleaning services",
             features: [
               "Dry cleaning for all garment types",
               "Wash & fold service",
@@ -1131,28 +1149,28 @@
               "Wedding & formalwear care",
               "Leather & suede specialist treatment",
               "Commercial / bulk dry cleaning",
-              "Fast turnaround across Jersey",
             ],
             quote: "Get a Free Quote",
             freeQuote: "FREE QUOTE",
-            call: "Call 01534 499429",
+            call: "Request a quote",
             sideTitle: "Request a free quote",
-            sideDesc: "No obligation. We'll get back to you within 24 hours.",
+            sideDesc: "Tell us what you need and send your request using the form.",
             ready: "Ready to get started?",
             contact: "CONTACT US TODAY",
-            navDry: "Dry Clean",
-            navHome: "Home Clean",
+            navDry: "Dry Cleaning",
+            navHome: "Home Cleaning",
             navMaint: "Maintenance",
             navElec: "Electrical",
             navPlumb: "Plumbing",
             navDeco: "Decorating",
           },
           nl: {
+            topBar: "Diensten voor huis en vastgoed in Nederland",
             tag: "Stomerij",
-            title: "Professionele Stomerij & Wasserij",
-            desc: "Van dagelijkse was tot specialistische kledingverzorging — eenvoudig, stressvrij en vakkundig in de Channel Islands.",
+            title: "Stomerij en wasserij in Nederland",
+            desc: "Stomerij, wasserij en kledingverzorging, met wassen en vouwen, strijken, aanpassingen en zorg voor formele kleding, leer en suède.",
             offerLabel: "Wat wij bieden",
-            included: "Wat is inbegrepen",
+            included: "Beschikbare stomerijdiensten",
             features: [
               "Stomerij voor alle kledingstukken",
               "Was & vouw service",
@@ -1161,17 +1179,16 @@
               "Trouw- & feestkleding",
               "Leer & suède behandeling",
               "Commerciële stomerij",
-              "Snelle service in Jersey",
             ],
             quote: "Gratis Offerte",
             freeQuote: "OFFERTE",
-            call: "Bel 01534 499429",
+            call: "Offerte aanvragen",
             sideTitle: "Vraag een gratis offerte",
-            sideDesc: "Vrijblijvend. Wij reageren binnen 24 uur.",
+            sideDesc: "Vertel wat u nodig heeft en verstuur uw aanvraag via het formulier.",
             ready: "Klaar om te beginnen?",
             contact: "NEEM CONTACT OP",
             navDry: "Stomerij",
-            navHome: "Reiniging",
+            navHome: "Schoonmaak",
             navMaint: "Onderhoud",
             navElec: "Elektriciteit",
             navPlumb: "Loodgieterij",
@@ -1190,7 +1207,23 @@
           if (nlBtn) nlBtn.classList.toggle("active", lang === "nl");
           const t = T[lang];
 
+          document
+            .querySelectorAll("[data-i18n-en][data-i18n-nl]")
+            .forEach((el) => {
+              el.textContent = el.getAttribute(`data-i18n-${lang}`);
+            });
+          ["alt", "aria-label", "placeholder"].forEach((attribute) => {
+            const key = attribute === "aria-label" ? "aria" : attribute;
+            document
+              .querySelectorAll(`[data-i18n-${key}-en], [data-i18n-${key}-nl]`)
+              .forEach((el) => {
+                const value = el.getAttribute(`data-i18n-${key}-${lang}`);
+                if (value !== null) el.setAttribute(attribute, value);
+              });
+          });
+
           const map = {
+            "i18n-topBar": t.topBar,
             "i18n-tag": t.tag,
             "i18n-title": t.title,
             "i18n-desc": t.desc,

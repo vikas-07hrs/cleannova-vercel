@@ -50,11 +50,6 @@
         nav.appendChild(languageControls);
       }
 
-      const phone = document.createElement("a");
-      phone.href = "tel:+441534499429";
-      phone.textContent = "Call 01534 499429";
-      nav.appendChild(phone);
-
       const quote = document.createElement("button");
       quote.className = "btn-primary";
       quote.type = "button";
