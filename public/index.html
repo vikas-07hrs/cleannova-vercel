@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <title>Cleannova | Property & Home Services – Channel Islands</title>
+  <meta name="description" content="Cleannova – Jersey's trusted property & home services specialists. Dry cleaning, home cleaning, maintenance, electrical, plumbing & decorating since 1994.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00C853;
+      --primary-dark: #00A844;
+      --dark: #0F172A;
+      --dark-soft: #1E293B;
+      --text: #334155;
+      --text-light: #64748B;
+      --bg: #F8FAFC;
+      --white: #FFFFFF;
+      --border: #E2E8F0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      font-size: 16px;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; transition: 0.2s; }
+    button, .btn {
+      cursor: pointer; border: none; font-family: inherit;
+      font-weight: 600; transition: all 0.2s ease;
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+    /* Top bar */
+    .top-bar {
+      background: var(--dark);
+      color: #94A3B8;
+      font-size: 13px;
+      padding: 8px 0;
+      text-align: center;
+    }
+    .top-bar span { color: var(--primary); }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: 12px;
+      flex-wrap: nowrap !important;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; font-size: 22px; color: var(--dark);
+    }
+    .logo-icon {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--primary), #00E676);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 800; font-size: 18px;
+    }
+    nav {
+      display: flex; align-items: center; gap: 2px;
+      flex-wrap: nowrap !important;
+      white-space: nowrap;
+      overflow: visible !important;
+    }
+    nav a {
+      padding: 8px 14px; font-size: 15px; font-weight: 500;
+      color: var(--dark); border-radius: 8px;
+      white-space: nowrap !important;
+      display: inline-block;
+    }
+    nav a:hover { background: var(--bg); color: var(--primary-dark); }
+    .nav-dropdown {
+      position: relative; display: inline-block;
+      white-space: nowrap !important;
+      z-index: 50;
+    }
+    .nav-dropdown > a { white-space: nowrap !important; display: inline-block; }
+    .nav-dropdown > a::after { content: ' ▾'; font-size: 10px; }
+    .dropdown-menu {
+      position: absolute; top: calc(100% + 4px); left: 0;
+      background: white; border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12); min-width: 220px;
+      padding: 8px; opacity: 0; visibility: hidden;
+      transform: translateY(6px); transition: 0.15s ease;
+      z-index: 999;
+      pointer-events: none;
+      border: 1px solid var(--border);
+    }
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+      opacity: 1; visibility: visible; transform: translateY(0);
+      pointer-events: auto;
+    }
+    .dropdown-menu a {
+      display: block; padding: 10px 14px; font-size: 14px;
+      border-radius: 6px; white-space: nowrap;
+      color: var(--dark);
+    }
+    .dropdown-menu a:hover { background: var(--bg); color: var(--primary-dark); }
+    .header-actions {
+      display: flex; align-items: center; gap: 16px;
+    }
+    .phone {
+      font-weight: 600; font-size: 14px; color: var(--dark);
+      display: flex; align-items: center; gap: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .phone:hover { color: var(--primary); }
+    .header-actions { flex-shrink: 0; }
+    nav { flex-shrink: 1; min-width: 0; }
+    .btn-primary {
+      background: var(--primary); color: white;
+      padding: 10px 20px; border-radius: 8px; font-size: 14px;
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent; color: white;
+      border: 2px solid white; padding: 12px 24px;
+      border-radius: 8px; font-size: 15px;
+    }
+    .btn-outline:hover { background: white; color: var(--dark); }
+    .btn-white {
+      background: white; color: var(--dark);
+      padding: 12px 24px; border-radius: 8px; font-size: 15px;
+    }
+    .btn-white:hover { background: var(--bg); }
+    .lang-switch {
+      display: flex; gap: 4px; font-size: 13px; font-weight: 600;
+    }
+    .lang-switch button {
+      background: none; padding: 4px 8px; border-radius: 4px;
+      color: var(--text-light);
+    }
+    .lang-switch button.active { background: var(--bg); color: var(--primary); }
+
+
+    @media (max-width: 1100px) {
+      .phone { display: none !important; }
+    }
+    /* Mobile menu */
+    .menu-toggle {
+      display: none; background: none; font-size: 24px;
+      color: var(--dark); padding: 8px;
+    }
+    @media (max-width: 1280px) {
+      nav { display: none !important; }
+      .phone { display: none !important; }
+      .menu-toggle { display: block !important; }
+      .header-actions { gap: 10px; }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative; height: 620px;
+      background: #1a1a2e;
+      overflow: hidden;
+    }
+    .hero-slides { position: absolute; inset: 0; }
+    .hero-slide {
+      position: absolute; inset: 0;
+      opacity: 0; transition: opacity 0.8s ease;
+      background-size: cover; background-position: center;
+    }
+    .hero-slide.active { opacity: 1; }
+    .hero-slide::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(15,23,42,0.75) 0%, rgba(15,23,42,0.4) 60%, rgba(15,23,42,0.2) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2; height: 100%;
+      display: flex; align-items: center;
+    }
+    .hero-text { max-width: 620px; color: white; }
+    .hero-badge {
+      display: inline-block; background: var(--primary);
+      color: white; font-size: 12px; font-weight: 700;
+      padding: 6px 14px; border-radius: 6px;
+      letter-spacing: 0.5px; margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 16px; letter-spacing: -0.5px;
+    }
+    .hero p {
+      font-size: 17px; color: rgba(255,255,255,0.85);
+      margin-bottom: 28px; max-width: 480px;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      z-index: 3; width: 44px; height: 44px;
+      background: rgba(255,255,255,0.15); backdrop-filter: blur(4px);
+      border: none; border-radius: 50%; color: white;
+      font-size: 18px; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: 0.2s;
+    }
+    .hero-nav:hover { background: rgba(255,255,255,0.3); }
+    .hero-nav.prev { left: 20px; }
+    .hero-nav.next { right: 20px; }
+    .hero-dots {
+      position: absolute; bottom: 100px; left: 50%;
+      transform: translateX(-50%); z-index: 3;
+      display: flex; gap: 8px;
+    }
+    .hero-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.4); border: none; cursor: pointer;
+    }
+    .hero-dot.active { background: white; width: 24px; border-radius: 4px; }
+
+    /* Stats bar */
+    .stats {
+      background: var(--dark);
+      padding: 28px 0;
+      margin-top: -60px;
+      position: relative; z-index: 5;
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 16px; text-align: center;
+    }
+    .stat-item { color: white; }
+    .stat-num {
+      font-size: 32px; font-weight: 800;
+      color: var(--primary); line-height: 1.2;
+    }
+    .stat-label {
+      font-size: 12px; text-transform: uppercase;
+      letter-spacing: 1px; color: #94A3B8; margin-top: 4px;
+    }
+    @media (max-width: 640px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .hero { height: 520px; }
+    }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 700; color: var(--primary);
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+    }
+    .section-label::before {
+      content: ''; width: 24px; height: 2px; background: var(--primary);
+    }
+    .section-title {
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 800; color: var(--dark);
+      line-height: 1.2; margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .section-desc {
+      font-size: 17px; color: var(--text-light);
+      max-width: 560px; margin-bottom: 40px;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+    }
+    .about-img {
+      position: relative; border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow);
+    }
+    .about-img img { width: 100%; height: 380px; object-fit: cover; }
+    .about-badge {
+      position: absolute; bottom: 20px; right: 20px;
+      background: var(--primary); color: white;
+      padding: 16px 20px; border-radius: 10px;
+      text-align: center; font-weight: 800;
+    }
+    .about-badge span { display: block; font-size: 28px; line-height: 1; }
+    .about-badge small { font-size: 11px; font-weight: 600; opacity: 0.9; }
+    .check-list { list-style: none; margin-top: 24px; }
+    .check-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-bottom: 12px; font-size: 16px; color: var(--text);
+    }
+    .check-list li::before {
+      content: '✓';
+      background: var(--primary); color: white;
+      width: 22px; height: 22px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; flex-shrink: 0;
+      margin-top: 1px;
+    }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* Services */
+    .services { background: var(--bg); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: white; border-radius: var(--radius);
+      overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+    .service-card img {
+      width: 100%; height: 200px; object-fit: cover;
+    }
+    .service-card-body { padding: 24px; }
+    .service-tag {
+      display: inline-block; background: var(--primary);
+      color: white; font-size: 11px; font-weight: 700;
+      padding: 4px 10px; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .service-card h3 {
+      font-size: 20px; font-weight: 700; color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 15px; color: var(--text-light);
+      margin-bottom: 16px; line-height: 1.5;
+    }
+    .service-link {
+      font-size: 13px; font-weight: 700; color: var(--primary);
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .service-link:hover { gap: 8px; }
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
+    /* CTA */
+    .cta {
+      position: relative; padding: 100px 0;
+      background: var(--dark-soft);
+      text-align: center; color: white;
+      overflow: hidden;
+    }
+    .cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('/images/cleannova-home-interior.jpg') center/cover;
+      opacity: 0.15;
+    }
+    .cta .container { position: relative; z-index: 1; }
+    .cta h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800; margin-bottom: 24px;
+    }
+    .cta .btn-primary { font-size: 16px; padding: 14px 32px; }
+
+    /* Footer */
+    footer {
+      background: var(--dark); color: #94A3B8;
+      padding: 60px 0 24px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    .footer-brand .logo { color: white; margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; max-width: 280px; line-height: 1.6; }
+    .footer-col h4 {
+      color: white; font-size: 14px; font-weight: 700;
+      margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .footer-col a {
+      display: block; font-size: 14px; margin-bottom: 10px;
+      color: #94A3B8;
+    }
+    .footer-col a:hover { color: var(--primary); }
+    .footer-bottom {
+      border-top: 1px solid #1E293B; padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 13px; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom a { color: #94A3B8; margin-left: 16px; }
+    .footer-bottom a:hover { color: var(--primary); }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Cookie banner */
+    .cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--dark); color: white;
+      padding: 20px 24px; z-index: 1000;
+      display: none; box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    }
+    .cookie-banner.show { display: block; }
+    .cookie-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .cookie-text { font-size: 14px; max-width: 700px; line-height: 1.5; }
+    .cookie-text a { color: var(--primary); text-decoration: underline; }
+    .cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
+    .cookie-btns button {
+      padding: 10px 20px; border-radius: 8px; font-size: 14px;
+    }
+    .btn-accept { background: var(--primary); color: white; }
+    .btn-accept:hover { background: var(--primary-dark); }
+    .btn-decline {
+      background: transparent; color: #94A3B8;
+      border: 1px solid #334155;
+    }
+    .btn-decline:hover { border-color: #94A3B8; color: white; }
+
+    /* Contact modal */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(15,23,42,0.6);
+      z-index: 200; display: none; align-items: center; justify-content: center;
+      padding: 20px; backdrop-filter: blur(4px);
+    }
+    .modal-overlay.show { display: flex; }
+    .modal {
+      background: white; border-radius: 16px; padding: 36px;
+      max-width: 480px; width: 100%; position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+    .modal h3 {
+      font-size: 22px; font-weight: 800; color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .modal p { font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
+    .modal-close {
+      position: absolute; top: 12px; right: 12px;
+      background: var(--bg); font-size: 22px; color: var(--dark);
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border); z-index: 10;
+      line-height: 1; font-weight: 400;
+    }
+    .modal-close:hover { background: #fee2e2; color: #dc2626; border-color: #fecaca; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block; font-size: 13px; font-weight: 600;
+      color: var(--dark); margin-bottom: 6px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 14px; border: 1px solid var(--border);
+      border-radius: 8px; font-size: 14px; font-family: inherit;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--primary);
+    }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-consent {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 13px; color: var(--text-light); margin-bottom: 20px;
+    }
+    .form-consent input { margin-top: 3px; }
+    .form-success {
+      display: none; text-align: center; padding: 20px 0;
+    }
+    .form-success.show { display: block; }
+    .form-success .icon {
+      width: 56px; height: 56px; background: #DCFCE7;
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 16px;
+      font-size: 28px; color: var(--primary);
+    }
+
+    /* Privacy page sections (hidden by default) */
+    .page-section { display: none; padding: 60px 0; }
+    .page-section.active { display: block; }
+    .page-content { max-width: 800px; }
+    .page-content h2 { font-size: 28px; font-weight: 800; color: var(--dark); margin-bottom: 20px; }
+    .page-content h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin: 28px 0 12px; }
+    .page-content p, .page-content li { font-size: 15px; color: var(--text); margin-bottom: 12px; line-height: 1.7; }
+    .page-content ul { padding-left: 20px; margin-bottom: 16px; }
+
+    /* Mobile nav drawer */
+    .mobile-nav {
+      position: fixed; top: 0; right: -300px; width: 280px; height: 100%;
+      background: white; z-index: 150; padding: 24px;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+      transition: right 0.3s ease; overflow-y: auto;
+    }
+    .mobile-nav.open { right: 0; }
+    .mobile-nav a {
+      display: block; padding: 14px 0; font-weight: 500; font-size: 16px;
+      border-bottom: 1px solid var(--border); color: var(--dark);
+    }
+    .mobile-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+      z-index: 140; display: none;
+    }
+    .mobile-overlay.show { display: block; }
+
+
+    /* Language / layout stability */
+    body.lang-nl nav a { font-size: 14px; padding: 8px 12px; }
+    body.lang-nl .btn-primary { font-size: 12px; padding: 8px 12px; }
+    .hero-text { min-height: 280px; }
+    .hero h1 { word-wrap: break-word; overflow-wrap: break-word; }
+    header { overflow: visible !important; }
+    .header-inner { flex-wrap: nowrap; }
+    nav { flex-wrap: nowrap; overflow: visible !important; }
+
+    /* ===== MOBILE FIXES ===== */
+    @media (max-width: 1280px) {
+      .container { padding: 0 16px; }
+      .header-inner { height: 64px; gap: 10px; }
+      .logo { font-size: 20px; }
+      .logo-icon { width: 38px; height: 38px; font-size: 16px; }
+      .btn-primary { padding: 10px 16px; font-size: 14px; white-space: nowrap; }
+      .header-actions .btn-primary { padding: 10px 16px; }
+      nav, .phone { display: none !important; }
+      .menu-toggle { display: block !important; }
+    }
+    @media (max-width: 640px) {
+      .top-bar { font-size: 11px; padding: 6px 10px; line-height: 1.3; }
+      .hero { height: auto; min-height: 480px; }
+      .hero-content { padding: 40px 0 80px; }
+      .hero h1 { font-size: 26px !important; line-height: 1.2; }
+      .hero p { font-size: 14px; margin-bottom: 20px; }
+      .hero-btns { flex-direction: column; align-items: stretch; }
+      .hero-btns .btn-white, .hero-btns .btn-outline { width: 100%; text-align: center; padding: 12px 16px; font-size: 14px; }
+      .hero-nav { width: 36px; height: 36px; font-size: 16px; }
+      .hero-nav.prev { left: 8px; }
+      .hero-nav.next { right: 8px; }
+      .hero-dots { bottom: 70px; }
+      .stats { margin-top: -40px; padding: 20px 0; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .stat-num { font-size: 24px; }
+      .stat-label { font-size: 10px; }
+      section { padding: 48px 0; }
+      .section-title { font-size: 24px !important; }
+      .section-desc { font-size: 14px; margin-bottom: 24px; }
+      .about-grid { grid-template-columns: 1fr !important; gap: 24px; }
+      .about-img img { height: 240px; }
+      .about-badge { padding: 12px 14px; }
+      .about-badge span { font-size: 22px; }
+      .services-grid { grid-template-columns: 1fr !important; gap: 16px; }
+      .service-card img { height: 180px; }
+      .cta { padding: 48px 0; }
+      .cta h2 { font-size: 22px !important; padding: 0 8px; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 24px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+      .footer-bottom a { margin-left: 8px; }
+      .modal { padding: 24px 16px; margin: 12px; max-height: 90vh; overflow-y: auto; }
+      .modal h3 { font-size: 18px; padding-right: 36px; }
+      .cookie-banner { padding: 14px 12px; }
+      .cookie-inner { flex-direction: column; gap: 12px; text-align: left; }
+      .cookie-btns { width: 100%; }
+      .cookie-btns button { flex: 1; }
+      .lang-switch { order: -1; }
+    }
+    @media (max-width: 400px) {
+      .logo span, .logo { font-size: 16px; }
+      .btn-primary { font-size: 11px; padding: 8px 10px; }
+      .hero h1 { font-size: 22px !important; }
+    }
+
+  </style>
+  <link rel="stylesheet" href="/css/modern-glass.css?v=20261008v8">
+  <script src="/js/modern-ui.js?v=20261008v7" defer></script>
+</head>
+<body>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-inner">
+      <div class="cookie-text" data-i18n="cookieText">
+        We use cookies to improve your experience and analyse site traffic. By clicking “Accept”, you consent to our use of cookies. Read our <a href="#privacy" onclick="showPage('privacy')">Privacy Policy</a> and <a href="#cookies" onclick="showPage('cookies')">Cookie Policy</a>.
+      </div>
+      <div class="cookie-btns">
+        <button class="btn-decline" onclick="declineCookies()" data-i18n="decline">Decline</button>
+        <button class="btn-accept" onclick="acceptCookies()" data-i18n="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <span data-i18n="topBar">Jersey's trusted property &amp; home services specialists since 1994</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="/#home" class="logo" onclick="navigateHomeSection('home', event)">
+        <div class="logo-icon">C</div>
+        Cleannova
+      </a>
+      <nav>
+        <a href="/#home" onclick="navigateHomeSection('home', event)" data-i18n="navHome">Home</a>
+        <a href="/#about" onclick="navigateHomeSection('about', event)" data-i18n="navAbout">About</a>
+        <a href="/#services" onclick="navigateHomeSection('services', event)" data-i18n="navServices">Services</a>
+        <a href="/#why-us" onclick="navigateHomeSection('why-us', event)" data-i18n="navWhy">Why Us</a>
+        <a href="/#contact" onclick="navigateHomeSection('contact', event)" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch">
+          <button class="active" onclick="setLang('en')" id="langEn">EN</button>
+          <button onclick="setLang('nl')" id="langNl">NL</button>
+        </div>
+        <a href="tel:+441534499429" class="phone">📞&nbsp;01534&nbsp;499429</a>
+        <button class="btn-primary" onclick="openQuote()" data-i18n="freeQuote">FREE QUOTE</button>
+        <button class="menu-toggle" onclick="toggleMobile()" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobile()"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/dry-cleaning.html" data-i18n="navDry">Dry Cleaning</a>
+    <a href="/home-cleaning.html" data-i18n="navHomeClean">Home Cleaning</a>
+    <a href="/maintenance.html" data-i18n="navMaint">Maintenance</a>
+    <a href="/electrical.html" data-i18n="navElec">Electrical</a>
+    <a href="/plumbing.html" data-i18n="navPlumb">Plumbing</a>
+    <a href="/decorating.html" data-i18n="navDeco">Decorating</a>
+    <a href="tel:+441534499429">📞&nbsp;01534&nbsp;499429</a>
+    <button class="btn-primary" style="width:100%;margin-top:16px" onclick="toggleMobile(); openQuote()" data-i18n="freeQuote">FREE QUOTE</button>
+  </div>
+
+  <!-- HOME PAGE -->
+  <div id="homePage">
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-slides">
+        <div class="hero-slide active" style="background-image:url('/images/service-dry-cleaning.jpg')"></div>
+        <div class="hero-slide" data-bg="/images/service-home-cleaning.jpg"></div>
+        <div class="hero-slide" data-bg="/images/service-electrical.jpg"></div>
+        <div class="hero-slide" data-bg="/images/service-plumbing.jpg"></div>
+        <div class="hero-slide" data-bg="/images/service-decorating.jpg"></div>
+        <div class="hero-slide" data-bg="/images/service-maintenance.jpg"></div>
+      </div>
+      <button class="hero-nav prev" onclick="changeSlide(-1)">‹</button>
+      <button class="hero-nav next" onclick="changeSlide(1)">›</button>
+      <div class="hero-content">
+        <div class="container">
+          <div class="hero-text">
+            <a class="hero-service-link" id="heroServiceText" href="/dry-cleaning.html">
+              <div class="hero-badge" id="heroBadge" data-i18n="heroBadge">Dry Cleaning</div>
+              <h1 id="heroTitle" data-i18n="heroTitle">Professional Dry Cleaning &amp; Laundry Services in Jersey</h1>
+              <p id="heroDesc" data-i18n="heroDesc">From everyday laundry to specialist garment care — simple, stress-free and expertly done across the Channel Islands.</p>
+            </a>
+            <div class="hero-btns">
+              <button class="btn-white" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" data-i18n="findOutMore">Find Out More</button>
+              <button class="btn-outline" onclick="openQuote()" data-i18n="getQuote">Get a Free Quote</button>
+            </div>
+          </div>
+          <a class="hero-image-link" id="heroServiceImage" href="/dry-cleaning.html" aria-label="View dry cleaning services">
+            <img class="hero-image" src="/images/cleannova-home-interior.jpg" alt="A bright, modern European home interior" width="720" height="520">
+          </a>
+        </div>
+      </div>
+      <div class="hero-dots" id="heroDots"></div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-num">30+</div>
+            <div class="stat-label" data-i18n="statYears">Years in Jersey</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">6</div>
+            <div class="stat-label" data-i18n="statDivisions">Service Divisions</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label" data-i18n="statProjects">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label" data-i18n="statEmergency">Emergency Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img">
+            <a href="/#about" aria-label="About Cleannova"><img src="/images/cleannova-home-interior.jpg" alt="Well-maintained home interior" loading="lazy" width="560" height="380"></a>
+            <div class="about-badge">
+              <span>1994</span>
+              <small data-i18n="estJersey">EST. IN JERSEY</small>
+            </div>
+          </div>
+          <div>
+            <div class="section-label" data-i18n="aboutLabel">About Cleannova</div>
+            <h2 class="section-title" data-i18n="aboutTitle">Jersey's Complete Property &amp; Home Services Company</h2>
+            <p data-i18n="aboutP1">Cleannova has been serving homes and businesses across the Channel Islands since 1994. We bring together six specialist divisions under one trusted name — making us your single point of contact for every property and home improvement need.</p>
+            <p style="margin-top:12px" data-i18n="aboutP2">From eco-renewable energy systems and plumbing to windows, decorating and fire safety — every service is delivered by qualified local professionals who take genuine pride in the quality of their work.</p>
+            <ul class="check-list">
+              <li data-i18n="check1">Six specialist service divisions under one trusted brand</li>
+              <li data-i18n="check2">All trades fully qualified, insured and locally based</li>
+              <li data-i18n="check3">Free no-obligation surveys and quotations</li>
+              <li data-i18n="check4">24/7 emergency response for urgent works</li>
+              <li data-i18n="check5">Residential and commercial properties covered</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-label" data-i18n="servicesLabel">Our Services</div>
+        <h2 class="section-title" data-i18n="servicesTitle">Six Specialist Divisions</h2>
+        <p class="section-desc" data-i18n="servicesDesc">Everything your property needs — from renewables and plumbing to fire safety and decorating — all from one trusted Jersey company.</p>
+
+        <div class="services-grid">
+          <article class="service-card" id="svc-dry">
+            <a class="service-card-link" href="/dry-cleaning.html">
+              <img src="/images/service-dry-cleaning.jpg" alt="Professional dry cleaning service" loading="lazy" width="400" height="200">
+              <div class="service-card-body">
+                <span class="service-tag" data-i18n="tagDry">Dry Cleaning</span>
+                <h3 data-i18n="svcDryTitle">Dry Cleaning</h3>
+                <p data-i18n="svcDryDesc">Professional dry cleaning, laundry, ironing, alterations and specialist garment care — delivered across Jersey with fast turnaround.</p>
+                <span class="service-link" data-i18n="findOutMoreLink">FIND OUT MORE →</span>
+              </div>
+            </a>
+            <button class="service-quick-button" type="button" data-service="dry" onclick="openServicePreview(this)" aria-haspopup="dialog" data-i18n="quickView">Quick view</button>
+          </article>
+          <article class="service-card" id="svc-home">
+            <a class="service-card-link" href="/home-cleaning.html">
+              <img src="/images/service-home-cleaning.jpg" alt="Professional home cleaning service" loading="lazy" width="400" height="200">
+              <div class="service-card-body">
+                <span class="service-tag" data-i18n="tagHome">Home Cleaning Services</span>
+                <h3 data-i18n="svcHomeTitle">Home Cleaning Services</h3>
+                <p data-i18n="svcHomeDesc">Professional home and commercial cleaning services across Jersey — flexible, reliable and affordable, available 7 days a week.</p>
+                <span class="service-link" data-i18n="findOutMoreLink">FIND OUT MORE →</span>
+              </div>
+            </a>
+            <button class="service-quick-button" type="button" data-service="home" onclick="openServicePreview(this)" aria-haspopup="dialog" data-i18n="quickView">Quick view</button>
+          </article>
+          <article class="service-card" id="svc-maint">
+            <a class="service-card-link" href="/maintenance.html">
+              <img src="/images/service-maintenance.jpg" alt="Property maintenance work" loading="lazy" width="400" height="200">
+              <div class="service-card-body">
+                <span class="service-tag" data-i18n="tagMaint">Maintenance</span>
+                <h3 data-i18n="svcMaintTitle">Property Maintenance</h3>
+                <p data-i18n="svcMaintDesc">Planned and reactive maintenance for residential and commercial properties — keeping your building safe, compliant and in excellent condition.</p>
+                <span class="service-link" data-i18n="findOutMoreLink">FIND OUT MORE →</span>
+              </div>
+            </a>
+            <button class="service-quick-button" type="button" data-service="maint" onclick="openServicePreview(this)" aria-haspopup="dialog" data-i18n="quickView">Quick view</button>
+          </article>
+          <article class="service-card" id="svc-elec">
+            <a class="service-card-link" href="/electrical.html">
+              <img src="/images/service-electrical.jpg" alt="Professional electrical services" loading="lazy" width="400" height="200">
+              <div class="service-card-body">
+                <span class="service-tag" data-i18n="tagElec">Electrical</span>
+                <h3 data-i18n="svcElecTitle">Electrical Services</h3>
+                <p data-i18n="svcElecDesc">Residential and commercial electrical services — inspection, installation, renovations and maintenance by fully licensed Jersey engineers.</p>
+                <span class="service-link" data-i18n="findOutMoreLink">FIND OUT MORE →</span>
+              </div>
+            </a>
+            <button class="service-quick-button" type="button" data-service="elec" onclick="openServicePreview(this)" aria-haspopup="dialog" data-i18n="quickView">Quick view</button>
+          </article>
+          <article class="service-card" id="svc-plumb">
+            <a class="service-card-link" href="/plumbing.html">
+              <img src="/images/service-plumbing.jpg" alt="Professional plumbing services" loading="lazy" width="400" height="200">
+              <div class="service-card-body">
+                <span class="service-tag" data-i18n="tagPlumb">Plumbing</span>
+                <h3 data-i18n="svcPlumbTitle">Plumbing Services</h3>
+                <p data-i18n="svcPlumbDesc">All plumbing and heating requirements — bathroom installations to oil boiler servicing. Grant G1 approved with 24hr emergency cover.</p>
+                <span class="service-link" data-i18n="findOutMoreLink">FIND OUT MORE →</span>
+              </div>
+            </a>
+            <button class="service-quick-button" type="button" data-service="plumb" onclick="openServicePreview(this)" aria-haspopup="dialog" data-i18n="quickView">Quick view</button>
+          </article>
+          <article class="service-card" id="svc-deco">
+            <a class="service-card-link" href="/decorating.html">
+              <img src="/images/service-decorating.jpg" alt="Painting and decorating work" loading="lazy" width="400" height="200">
+              <div class="service-card-body">
+                <span class="service-tag" data-i18n="tagDeco">Decorating</span>
+                <h3 data-i18n="svcDecoTitle">Painting &amp; Decorating</h3>
+                <p data-i18n="svcDecoDesc">Interior and exterior painting, plastering, tiling, flooring and carpentry — skilled tradespeople delivering exceptional finishes.</p>
+                <span class="service-link" data-i18n="findOutMoreLink">FIND OUT MORE →</span>
+              </div>
+            </a>
+            <button class="service-quick-button" type="button" data-service="deco" onclick="openServicePreview(this)" aria-haspopup="dialog" data-i18n="quickView">Quick view</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-us" id="why-us">
+      <div class="container why-us-layout">
+        <div class="why-us-intro">
+          <div class="section-label" data-i18n="whyLabel">Why Choose Us</div>
+          <h2 class="section-title" data-i18n="whyTitle">Professional service. Simple process. Reliable results.</h2>
+          <p class="section-desc" data-i18n="whyDesc">One local team, six trusted services, and clear support from your first enquiry to the finished job.</p>
+        </div>
+        <div class="why-us-list">
+          <article class="why-us-item"><span>01</span><h3 data-i18n="whyLocal">Local expertise</h3></article>
+          <article class="why-us-item"><span>02</span><h3 data-i18n="whyTeam">Professional team</h3></article>
+          <article class="why-us-item"><span>03</span><h3 data-i18n="whyFlexible">Flexible services</h3></article>
+          <article class="why-us-item"><span>04</span><h3 data-i18n="whyQuality">Quality you can trust</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-copy">
+          <h2 data-i18n="ctaTitle">Need help with your property?</h2>
+          <p data-i18n="ctaDesc">Tell us what you need and our local team will take it from there.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn-primary" onclick="openQuote()" data-i18n="contactToday">Get a Free Quote</button>
+          <a class="btn-outline" href="tel:+441534499429" data-i18n="callUs">Call 01534 499429</a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /homePage -->
+
+  <!-- Privacy Policy Page -->
+  <div class="page-section" id="privacyPage">
+    <div class="container page-content">
+      <h2 data-i18n="privacyTitle">Privacy Policy</h2>
+      <p data-i18n="privacyIntro">Cleannova ("we", "us", "our") is committed to protecting your privacy. This policy explains how we collect, use and safeguard your personal data in accordance with the Data Protection (Jersey) Law 2018 and GDPR principles.</p>
+      <h3 data-i18n="privacyH1">Information We Collect</h3>
+      <p data-i18n="privacyP1">We only collect data that is necessary: name, email, phone number, address, and service requirements when you request a quote or contact us. We do not sell your data to third parties.</p>
+      <h3 data-i18n="privacyH2">How We Use Your Data</h3>
+      <ul>
+        <li data-i18n="privacyL1">To respond to enquiries and provide quotes</li>
+        <li data-i18n="privacyL2">To deliver the services you request</li>
+        <li data-i18n="privacyL3">To improve our website and services</li>
+        <li data-i18n="privacyL4">To comply with legal obligations</li>
+      </ul>
+      <h3 data-i18n="privacyH3">Your Rights</h3>
+      <p data-i18n="privacyP2">You have the right to access, correct, or delete your personal data. Contact us at info@cleannova.com to exercise these rights.</p>
+      <p style="margin-top:24px"><a href="#home" onclick="showHome()" style="color:var(--primary);font-weight:600" data-i18n="backHome">← Back to Home</a></p>
+    </div>
+  </div>
+
+  <!-- Cookie Policy Page -->
+  <div class="page-section" id="cookiesPage">
+    <div class="container page-content">
+      <h2 data-i18n="cookieTitle">Cookie Policy</h2>
+      <p data-i18n="cookieIntro">This site uses cookies to enhance your experience. Cookies are small text files stored on your device.</p>
+      <h3 data-i18n="cookieH1">Essential Cookies</h3>
+      <p data-i18n="cookieP1">Required for the website to function (e.g. language preference, cookie consent). These cannot be disabled.</p>
+      <h3 data-i18n="cookieH2">Analytics Cookies</h3>
+      <p data-i18n="cookieP2">Help us understand how visitors use the site so we can improve it. Only set if you accept cookies.</p>
+      <h3 data-i18n="cookieH3">Managing Cookies</h3>
+      <p data-i18n="cookieP3">You can accept or decline non-essential cookies via the banner. You can also change settings in your browser.</p>
+      <p style="margin-top:24px"><a href="#home" onclick="showHome()" style="color:var(--primary);font-weight:600" data-i18n="backHome">← Back to Home</a></p>
+    </div>
+  </div>
+
+  <!-- Terms Page -->
+  <div class="page-section" id="termsPage">
+    <div class="container page-content">
+      <h2 data-i18n="termsTitle">Terms &amp; Conditions</h2>
+      <p data-i18n="termsIntro">By using this website and our services you agree to these terms.</p>
+      <h3 data-i18n="termsH1">Services</h3>
+      <p data-i18n="termsP1">All quotes are free and no-obligation. Final prices are confirmed in writing before work begins. We reserve the right to decline work that falls outside our expertise or capacity.</p>
+      <h3 data-i18n="termsH2">Liability</h3>
+      <p data-i18n="termsP2">We carry full public liability insurance. Our liability is limited to the value of the contracted works unless otherwise agreed in writing.</p>
+      <h3 data-i18n="termsH3">Refunds</h3>
+      <p data-i18n="termsP3">If you are not satisfied with our service, please contact us within 7 days. We will investigate and, where appropriate, offer a remedy or partial refund.</p>
+      <p style="margin-top:24px"><a href="#home" onclick="showHome()" style="color:var(--primary);font-weight:600" data-i18n="backHome">← Back to Home</a></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo" onclick="showHome()">
+            <div class="logo-icon">C</div>
+            Cleannova
+          </a>
+          <p data-i18n="footerTagline">Jersey's trusted property and home services specialist since 1994.</p>
+          <a href="/#home" aria-label="Cleannova home"><img class="footer-illustration" src="/images/cleannova-home-interior.jpg" alt="A bright, well-kept home interior" width="320" height="160" loading="lazy"></a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footerServices">Services</h4>
+          <a href="/dry-cleaning.html" data-i18n="navDry">Dry Cleaning</a>
+          <a href="/home-cleaning.html" data-i18n="navHomeClean">Home Cleaning</a>
+          <a href="/maintenance.html" data-i18n="navMaint">Maintenance</a>
+          <a href="/electrical.html" data-i18n="navElec">Electrical</a>
+          <a href="/plumbing.html" data-i18n="navPlumb">Plumbing</a>
+          <a href="/decorating.html" data-i18n="navDeco">Decorating</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footerCompany">Company</h4>
+          <a href="#about" onclick="showHome()" data-i18n="footerAbout">About Us</a>
+          <a href="#contact" onclick="showHome(); openQuote()" data-i18n="footerContact">Contact Us</a>
+          <a href="#privacy" onclick="showPage('privacy')" data-i18n="footerPrivacy">Privacy Policy</a>
+          <a href="#cookies" onclick="showPage('cookies')" data-i18n="footerCookies">Cookie Policy</a>
+          <a href="#terms" onclick="showPage('terms')" data-i18n="footerTerms">Terms &amp; Conditions</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footerContact">Contact</h4>
+          <a href="tel:+441534499429">01534 499429</a>
+          <a href="mailto:info@cleannova.com">info@cleannova.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Cleannova. <span data-i18n="allRights">All rights reserved.</span> · Design by <a href="https://rakpal.com" target="_blank" rel="noopener" style="color:var(--primary);margin-left:4px">Rakpal.com</a></span>
+        <div>
+          <a href="#privacy" onclick="showPage('privacy')" data-i18n="footerPrivacy">Privacy</a>
+          <a href="#cookies" onclick="showPage('cookies')" data-i18n="footerCookies">Cookies</a>
+          <a href="#terms" onclick="showPage('terms')" data-i18n="footerTerms">T&amp;Cs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="service-preview-overlay" id="servicePreview" aria-hidden="true">
+    <section class="service-preview" role="dialog" aria-modal="true" aria-labelledby="servicePreviewTitle" aria-describedby="servicePreviewDescription" tabindex="-1">
+      <button class="service-preview-close" type="button" onclick="closeServicePreview()" aria-label="Close service details">×</button>
+      <img class="service-preview-image" id="servicePreviewImage" src="/images/cleannova-home-interior.jpg" alt="">
+      <div class="service-preview-content">
+        <span class="service-tag" id="servicePreviewTag"></span>
+        <h2 id="servicePreviewTitle"></h2>
+        <p id="servicePreviewDescription"></p>
+        <div class="service-preview-actions">
+          <a class="btn-white" id="servicePreviewVisit" href="" data-i18n="viewService">View service</a>
+          <button class="btn-primary" id="servicePreviewQuote" type="button" data-i18n="getQuote">Get a Free Quote</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Quote Modal -->
+  <div class="modal-overlay" id="quoteModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeQuote()" aria-label="Close">×</button>
+      <div id="quoteForm">
+        <h3 data-i18n="modalTitle">Request a Free Quote</h3>
+        <p data-i18n="modalDesc">Fill in the form and we'll get back to you within 24 hours. No obligation.</p>
+        <form onsubmit="submitQuote(event)">
+          <div class="form-group">
+            <label data-i18n="labelName">Full Name *</label>
+            <input type="text" required name="name" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelEmail">Email *</label>
+            <input type="email" required name="email" placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelPhone">Phone</label>
+            <input type="tel" name="phone" placeholder="01534 000000">
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelService">Service *</label>
+            <select name="service" required>
+              <option value="" data-i18n="selectService">Select a service…</option>
+              <option value="dry" data-i18n="navDry">Dry Cleaning</option>
+              <option value="home" data-i18n="navHomeClean">Home Cleaning</option>
+              <option value="maint" data-i18n="navMaint">Maintenance</option>
+              <option value="elec" data-i18n="navElec">Electrical</option>
+              <option value="plumb" data-i18n="navPlumb">Plumbing</option>
+              <option value="deco" data-i18n="navDeco">Decorating</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelMessage">Message</label>
+            <textarea name="message" placeholder="Tell us about your requirements…"></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" required id="consentCheck">
+            <label for="consentCheck" data-i18n="formConsent">I agree to the processing of my data as described in the Privacy Policy and consent to being contacted about this enquiry.</label>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button type="button" class="btn-decline" style="flex:1;padding:14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text)" onclick="closeQuote()" data-i18n="closeBtn">Cancel</button>
+            <button type="submit" class="btn-primary" style="flex:2;padding:14px" data-i18n="submitQuote">Send Request</button>
+          </div>
+        </form>
+      </div>
+      <div class="form-success" id="quoteSuccess">
+        <div class="icon">✓</div>
+        <h3 data-i18n="successTitle">Thank you!</h3>
+        <p data-i18n="successMsg">We've received your request and will contact you within 24 hours.</p>
+        <button class="btn-primary" style="margin-top:16px" onclick="closeQuote()" data-i18n="closeBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== i18n =====
+    const translations = {
+      en: {
+        topBar: "Jersey's trusted property & home services specialists since 1994",
+        navHome: "Home", navAbout: "About", navServices: "Services", navWhy: "Why Us", navContact: "Contact",
+        navDry: "Dry Cleaning", navHomeClean: "Home Cleaning", navMaint: "Maintenance",
+        navElec: "Electrical", navPlumb: "Plumbing", navDeco: "Decorating",
+        freeQuote: "FREE QUOTE",
+        heroBadge: "Dry Cleaning",
+        heroTitle: "Professional Dry Cleaning & Laundry Services in Jersey",
+        heroDesc: "From everyday laundry to specialist garment care — simple, stress-free and expertly done across the Channel Islands.",
+        findOutMore: "Find Out More", getQuote: "Get a Free Quote",
+        statYears: "Years in Jersey", statDivisions: "Service Divisions",
+        statProjects: "Projects Completed", statEmergency: "Emergency Support",
+        aboutLabel: "About Cleannova",
+        aboutTitle: "Jersey's Complete Property & Home Services Company",
+        aboutP1: "Cleannova has been serving homes and businesses across the Channel Islands since 1994. We bring together six specialist divisions under one trusted name — making us your single point of contact for every property and home improvement need.",
+        aboutP2: "From eco-renewable energy systems and plumbing to windows, decorating and fire safety — every service is delivered by qualified local professionals who take genuine pride in the quality of their work.",
+        check1: "Six specialist service divisions under one trusted brand",
+        check2: "All trades fully qualified, insured and locally based",
+        check3: "Free no-obligation surveys and quotations",
+        check4: "24/7 emergency response for urgent works",
+        check5: "Residential and commercial properties covered",
+        estJersey: "EST. IN JERSEY",
+        servicesLabel: "Our Services", servicesTitle: "Six Specialist Divisions",
+        servicesDesc: "Everything your property needs — from renewables and plumbing to fire safety and decorating — all from one trusted Jersey company.",
+        whyLabel: "Why Choose Us", whyTitle: "Professional service. Simple process. Reliable results.",
+        whyDesc: "One local team, six trusted services, and clear support from your first enquiry to the finished job.",
+        whyLocal: "Local expertise", whyTeam: "Professional team", whyFlexible: "Flexible services", whyQuality: "Quality you can trust",
+        tagDry: "Dry Cleaning", tagHome: "Home Cleaning Services", tagMaint: "Maintenance",
+        tagElec: "Electrical", tagPlumb: "Plumbing", tagDeco: "Decorating",
+        quickView: "Quick view", viewService: "View service", servicePreviewClose: "Close service details",
+        svcDryTitle: "Dry Cleaning", svcDryDesc: "Professional dry cleaning, laundry, ironing, alterations and specialist garment care — delivered across Jersey with fast turnaround.",
+        svcHomeTitle: "Home Cleaning Services", svcHomeDesc: "Professional home and commercial cleaning services across Jersey — flexible, reliable and affordable, available 7 days a week.",
+        svcMaintTitle: "Property Maintenance", svcMaintDesc: "Planned and reactive maintenance for residential and commercial properties — keeping your building safe, compliant and in excellent condition.",
+        svcElecTitle: "Electrical Services", svcElecDesc: "Residential and commercial electrical services — inspection, installation, renovations and maintenance by fully licensed Jersey engineers.",
+        svcPlumbTitle: "Plumbing Services", svcPlumbDesc: "All plumbing and heating requirements — bathroom installations to oil boiler servicing. Grant G1 approved with 24hr emergency cover.",
+        svcDecoTitle: "Painting & Decorating", svcDecoDesc: "Interior and exterior painting, plastering, tiling, flooring and carpentry — skilled tradespeople delivering exceptional finishes.",
+        findOutMoreLink: "FIND OUT MORE →",
+        ctaTitle: "Need help with your property?",
+        ctaDesc: "Tell us what you need and our local team will take it from there.",
+        contactToday: "Get a Free Quote", callUs: "Call 01534 499429",
+        footerTagline: "Jersey's trusted property and home services specialist since 1994.",
+        footerServices: "Services", footerCompany: "Company", footerAbout: "About Us",
+        footerContact: "Contact", footerPrivacy: "Privacy Policy", footerCookies: "Cookie Policy",
+        footerTerms: "Terms & Conditions", allRights: "All rights reserved.",
+        cookieText: 'We use cookies to improve your experience and analyse site traffic. By clicking “Accept”, you consent to our use of cookies. Read our <a href="#privacy" onclick="showPage(\'privacy\')">Privacy Policy</a> and <a href="#cookies" onclick="showPage(\'cookies\')">Cookie Policy</a>.',
+        accept: "Accept", decline: "Decline",
+        modalTitle: "Request a Free Quote", modalDesc: "Fill in the form and we'll get back to you within 24 hours. No obligation.",
+        labelName: "Full Name *", labelEmail: "Email *", labelPhone: "Phone",
+        labelService: "Service *", labelMessage: "Message",
+        selectService: "Select a service…",
+        formConsent: "I agree to the processing of my data as described in the Privacy Policy and consent to being contacted about this enquiry.",
+        submitQuote: "Send Request", successTitle: "Thank you!",
+        successMsg: "We've received your request and will contact you within 24 hours.",
+        closeBtn: "Close", backHome: "← Back to Home",
+        serviceQuoteTitle: "Get a quote for this service",
+        privacyTitle: "Privacy Policy",
+        privacyIntro: "Cleannova (\"we\", \"us\", \"our\") is committed to protecting your privacy. This policy explains how we collect, use and safeguard your personal data in accordance with the Data Protection (Jersey) Law 2018 and GDPR principles.",
+        privacyH1: "Information We Collect", privacyP1: "We only collect data that is necessary: name, email, phone number, address, and service requirements when you request a quote or contact us. We do not sell your data to third parties.",
+        privacyH2: "How We Use Your Data",
+        privacyL1: "To respond to enquiries and provide quotes", privacyL2: "To deliver the services you request",
+        privacyL3: "To improve our website and services", privacyL4: "To comply with legal obligations",
+        privacyH3: "Your Rights", privacyP2: "You have the right to access, correct, or delete your personal data. Contact us at info@cleannova.com to exercise these rights.",
+        cookieTitle: "Cookie Policy",
+        cookieIntro: "This site uses cookies to enhance your experience. Cookies are small text files stored on your device.",
+        cookieH1: "Essential Cookies", cookieP1: "Required for the website to function (e.g. language preference, cookie consent). These cannot be disabled.",
+        cookieH2: "Analytics Cookies", cookieP2: "Help us understand how visitors use the site so we can improve it. Only set if you accept cookies.",
+        cookieH3: "Managing Cookies", cookieP3: "You can accept or decline non-essential cookies via the banner. You can also change settings in your browser.",
+        termsTitle: "Terms & Conditions",
+        termsIntro: "By using this website and our services you agree to these terms.",
+        termsH1: "Services", termsP1: "All quotes are free and no-obligation. Final prices are confirmed in writing before work begins. We reserve the right to decline work that falls outside our expertise or capacity.",
+        termsH2: "Liability", termsP2: "We carry full public liability insurance. Our liability is limited to the value of the contracted works unless otherwise agreed in writing.",
+        termsH3: "Refunds", termsP3: "If you are not satisfied with our service, please contact us within 7 days. We will investigate and, where appropriate, offer a remedy or partial refund."
+      },
+      nl: {
+        topBar: "Jersey's vertrouwde specialisten in vastgoed- en huisservices sinds 1994",
+        navHome: "Home", navAbout: "Over ons", navServices: "Diensten", navWhy: "Waarom wij", navContact: "Contact",
+        navDry: "Stomerij", navHomeClean: "Reiniging", navMaint: "Onderhoud",
+        navElec: "Elektriciteit", navPlumb: "Loodgieterij", navDeco: "Schilderen",
+        freeQuote: "OFFERTE",
+        heroBadge: "Stomerij",
+        heroTitle: "Professionele Stomerij- & Wasserijdiensten in Jersey",
+        heroDesc: "Van dagelijkse was tot specialistische kledingverzorging — eenvoudig, stressvrij en vakkundig verzorgd in de Channel Islands.",
+        findOutMore: "Meer Informatie", getQuote: "Gratis Offerte",
+        statYears: "Jaar in Jersey", statDivisions: "Service Divisies",
+        statProjects: "Projecten Voltooid", statEmergency: "Noodhulp",
+        aboutLabel: "Over Cleannova",
+        aboutTitle: "Jersey's Complete Vastgoed- & Huisservices Bedrijf",
+        aboutP1: "Cleannova bedient al sinds 1994 woningen en bedrijven in de Channel Islands. Wij brengen zes specialistische divisies samen onder één vertrouwde naam — uw enige aanspreekpunt voor al uw vastgoed- en huisverbeteringsbehoeften.",
+        aboutP2: "Van eco-hernieuwbare energiesystemen en loodgieterij tot ramen, schilderen en brandveiligheid — elke dienst wordt geleverd door gekwalificeerde lokale professionals die trots zijn op de kwaliteit van hun werk.",
+        check1: "Zes specialistische service-divisies onder één merk",
+        check2: "Alle vakmensen volledig gekwalificeerd, verzekerd en lokaal gevestigd",
+        check3: "Gratis vrijblijvende inspecties en offertes",
+        check4: "24/7 noodhulp bij urgente werkzaamheden",
+        check5: "Residentiële en commerciële panden gedekt",
+        estJersey: "OPGERICHT IN JERSEY",
+        servicesLabel: "Onze Diensten", servicesTitle: "Zes Specialistische Divisies",
+        servicesDesc: "Alles wat uw woning nodig heeft — van hernieuwbare energie en loodgieterij tot brandveiligheid en schilderen — allemaal van één vertrouwd Jersey-bedrijf.",
+        whyLabel: "Waarom Cleannova", whyTitle: "Professionele service. Eenvoudig geregeld. Betrouwbaar resultaat.",
+        whyDesc: "Eén lokaal team, zes vertrouwde diensten en duidelijke begeleiding van uw eerste vraag tot de oplevering.",
+        whyLocal: "Lokale expertise", whyTeam: "Professioneel team", whyFlexible: "Flexibele diensten", whyQuality: "Kwaliteit waarop u kunt vertrouwen",
+        tagDry: "Stomerij", tagHome: "Reiniging", tagMaint: "Onderhoud",
+        tagElec: "Elektriciteit", tagPlumb: "Loodgieterij", tagDeco: "Schilderen",
+        quickView: "Bekijk details", viewService: "Bekijk dienst", servicePreviewClose: "Sluit dienstdetails",
+        svcDryTitle: "Stomerij", svcDryDesc: "Professionele stomerij, wasserij, strijken, reparaties en specialistische kledingverzorging — geleverd in heel Jersey met snelle doorlooptijd.",
+        svcHomeTitle: "Huishoudelijke Reiniging", svcHomeDesc: "Professionele thuis- en bedrijfsreiniging in heel Jersey — flexibel, betrouwbaar en betaalbaar, 7 dagen per week beschikbaar.",
+        svcMaintTitle: "Vastgoedonderhoud", svcMaintDesc: "Gepland en reactief onderhoud voor woon- en bedrijfspanden — zodat uw gebouw veilig, compliant en in uitstekende staat blijft.",
+        svcElecTitle: "Elektrische Diensten", svcElecDesc: "Residentiële en commerciële elektrische diensten — inspectie, installatie, renovatie en onderhoud door volledig erkende Jersey-engineers.",
+        svcPlumbTitle: "Loodgietersdiensten", svcPlumbDesc: "Alle loodgieterij- en verwarmingsbehoeften — van badkamerinstallaties tot olieketelservice. Grant G1 goedgekeurd met 24-uurs nooddekking.",
+        svcDecoTitle: "Schilderen & Decoratie", svcDecoDesc: "Interieur- en exterieurschilderwerk, stucwerk, tegels, vloeren en timmerwerk — vakmensen die uitzonderlijke afwerkingen leveren.",
+        findOutMoreLink: "MEER INFORMATIE →",
+        ctaTitle: "Hulp nodig met uw woning?",
+        ctaDesc: "Vertel ons wat u nodig heeft; ons lokale team helpt u verder.",
+        contactToday: "Vraag een gratis offerte aan", callUs: "Bel 01534 499429",
+        footerTagline: "Jersey's vertrouwde specialist in vastgoed- en huisservices sinds 1994.",
+        footerServices: "Diensten", footerCompany: "Bedrijf", footerAbout: "Over Ons",
+        footerContact: "Contact", footerPrivacy: "Privacybeleid", footerCookies: "Cookiebeleid",
+        footerTerms: "Algemene Voorwaarden", allRights: "Alle rechten voorbehouden.",
+        cookieText: 'Wij gebruiken cookies om uw ervaring te verbeteren en siteverkeer te analyseren. Door op “Accepteren” te klikken, stemt u in met ons gebruik van cookies. Lees ons <a href="#privacy" onclick="showPage(\'privacy\')">Privacybeleid</a> en <a href="#cookies" onclick="showPage(\'cookies\')">Cookiebeleid</a>.',
+        accept: "Accepteren", decline: "Weigeren",
+        modalTitle: "Vraag een Gratis Offerte Aan", modalDesc: "Vul het formulier in en wij nemen binnen 24 uur contact met u op. Geen verplichtingen.",
+        labelName: "Volledige Naam *", labelEmail: "E-mail *", labelPhone: "Telefoon",
+        labelService: "Dienst *", labelMessage: "Bericht",
+        selectService: "Selecteer een dienst…",
+        formConsent: "Ik ga akkoord met de verwerking van mijn gegevens zoals beschreven in het Privacybeleid en stem in met contact over dit verzoek.",
+        submitQuote: "Verzoek Versturen", successTitle: "Bedankt!",
+        successMsg: "Wij hebben uw verzoek ontvangen en nemen binnen 24 uur contact met u op.",
+        closeBtn: "Sluiten", backHome: "← Terug naar Home",
+        serviceQuoteTitle: "Vraag een offerte aan voor deze dienst",
+        privacyTitle: "Privacybeleid",
+        privacyIntro: "Cleannova (\"wij\", \"ons\") is toegewijd aan de bescherming van uw privacy. Dit beleid legt uit hoe wij uw persoonsgegevens verzamelen, gebruiken en beschermen in overeenstemming met de Data Protection (Jersey) Law 2018 en GDPR-principes.",
+        privacyH1: "Gegevens die Wij Verzamelen", privacyP1: "Wij verzamelen alleen noodzakelijke gegevens: naam, e-mail, telefoonnummer, adres en servicevereisten wanneer u een offerte aanvraagt of contact met ons opneemt. Wij verkopen uw gegevens niet aan derden.",
+        privacyH2: "Hoe Wij Uw Gegevens Gebruiken",
+        privacyL1: "Om te reageren op vragen en offertes te verstrekken", privacyL2: "Om de gevraagde diensten te leveren",
+        privacyL3: "Om onze website en diensten te verbeteren", privacyL4: "Om te voldoen aan wettelijke verplichtingen",
+        privacyH3: "Uw Rechten", privacyP2: "U heeft het recht om uw persoonsgegevens in te zien, te corrigeren of te verwijderen. Neem contact op via info@cleannova.com om deze rechten uit te oefenen.",
+        cookieTitle: "Cookiebeleid",
+        cookieIntro: "Deze site gebruikt cookies om uw ervaring te verbeteren. Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen.",
+        cookieH1: "Essentiële Cookies", cookieP1: "Nodig voor het functioneren van de website (bijv. taalvoorkeur, cookie-toestemming). Deze kunnen niet worden uitgeschakeld.",
+        cookieH2: "Analytische Cookies", cookieP2: "Helpen ons te begrijpen hoe bezoekers de site gebruiken zodat we deze kunnen verbeteren. Alleen geplaatst als u cookies accepteert.",
+        cookieH3: "Cookies Beheren", cookieP3: "U kunt niet-essentiële cookies accepteren of weigeren via de banner. U kunt ook instellingen in uw browser wijzigen.",
+        termsTitle: "Algemene Voorwaarden",
+        termsIntro: "Door deze website en onze diensten te gebruiken, gaat u akkoord met deze voorwaarden.",
+        termsH1: "Diensten", termsP1: "Alle offertes zijn gratis en vrijblijvend. Definitieve prijzen worden schriftelijk bevestigd voordat het werk begint. Wij behouden ons het recht voor om werk te weigeren dat buiten onze expertise of capaciteit valt.",
+        termsH2: "Aansprakelijkheid", termsP2: "Wij hebben volledige wettelijke aansprakelijkheidsverzekering. Onze aansprakelijkheid is beperkt tot de waarde van de gecontracteerde werkzaamheden, tenzij anders schriftelijk overeengekomen.",
+        termsH3: "Restituties", termsP3: "Als u niet tevreden bent met onze service, neem dan binnen 7 dagen contact met ons op. Wij onderzoeken en bieden waar passend een oplossing of gedeeltelijke restitutie."
+      }
+    };
+
+    let currentLang = localStorage.getItem('cleannova_lang') || 'en';
+
+    function setLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('cleannova_lang', lang);
+      document.getElementById('langEn').classList.toggle('active', lang === 'en');
+      document.getElementById('langNl').classList.toggle('active', lang === 'nl');
+      document.documentElement.lang = lang;
+      document.body.classList.toggle('lang-nl', lang === 'nl');
+      document.body.classList.toggle('lang-en', lang === 'en');
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) {
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = t[key];
+          } else if (key === 'cookieText') {
+            el.innerHTML = t[key];
+          } else {
+            el.innerHTML = t[key];
+          }
+        }
+      });
+      // Update hero if needed
+      updateHeroText();
+    }
+
+    // ===== Hero Slider =====
+    const heroData = [
+      { badge: {en:'Dry Cleaning', nl:'Stomerij'}, title: {en:'Professional Dry Cleaning & Laundry Services in Jersey', nl:'Professionele Stomerij- & Wasserijdiensten in Jersey'}, desc: {en:'From everyday laundry to specialist garment care — simple, stress-free and expertly done across the Channel Islands.', nl:'Van dagelijkse was tot specialistische kledingverzorging — eenvoudig, stressvrij en vakkundig verzorgd in de Channel Islands.'}, href:'/dry-cleaning.html' },
+      { badge: {en:'Home Cleaning', nl:'Huishoudelijke Reiniging'}, title: {en:'Professional Home & Commercial Cleaning Services', nl:'Professionele Thuis- & Bedrijfsreiniging'}, desc: {en:'Flexible, reliable and affordable cleaning for homes and businesses across Jersey — available 7 days a week from 7am.', nl:'Flexibele, betrouwbare en betaalbare reiniging voor woningen en bedrijven in Jersey — 7 dagen per week beschikbaar vanaf 7 uur.'}, href:'/home-cleaning.html' },
+      { badge: {en:'Electrical', nl:'Elektriciteit'}, title: {en:'Expert Electrical Services for Jersey Homes & Businesses', nl:'Deskundige Elektrische Diensten voor Jersey Woningen & Bedrijven'}, desc: {en:'Fully licensed and insured electricians for installation, inspection, renovations and maintenance across the Channel Islands.', nl:'Volledig erkende en verzekerde elektriciens voor installatie, inspectie, renovatie en onderhoud in de Channel Islands.'}, href:'/electrical.html' },
+      { badge: {en:'Plumbing', nl:'Loodgieterij'}, title: {en:'Expert Plumbing & Heating for Every Property', nl:'Deskundige Loodgieterij & Verwarming voor Elk Pand'}, desc: {en:'From emergency call-outs to full bathroom installations — your local Jersey plumbing specialists available 24/7.', nl:'Van noodgevallen tot complete badkamerinstallaties — uw lokale Jersey loodgieterspecialisten 24/7 beschikbaar.'}, href:'/plumbing.html' },
+      { badge: {en:'Decorating', nl:'Schilderen'}, title: {en:'Professional Painting & Decorating Services', nl:'Professionele Schilder- & Decoratiediensten'}, desc: {en:'Interior and exterior painting, plastering, tiling and more — skilled tradespeople delivering exceptional finishes across Jersey.', nl:'Interieur- en exterieurschilderwerk, stucwerk, tegels en meer — vakmensen die uitzonderlijke afwerkingen leveren in Jersey.'}, href:'/decorating.html' },
+      { badge: {en:'Maintenance', nl:'Onderhoud'}, title: {en:'Reliable Property Maintenance in Jersey', nl:'Betrouwbaar Vastgoedonderhoud in Jersey'}, desc: {en:'Planned and responsive property maintenance to keep homes and businesses safe, compliant and in excellent condition.', nl:'Gepland en reactief vastgoedonderhoud om woningen en bedrijven veilig, conform en in uitstekende staat te houden.'}, href:'/maintenance.html' }
+    ];
+    let currentSlide = 0;
+    let slideTimer;
+
+    function updateHeroText() {
+      const d = heroData[currentSlide];
+      document.getElementById('heroBadge').textContent = d.badge[currentLang];
+      document.getElementById('heroTitle').textContent = d.title[currentLang];
+      document.getElementById('heroDesc').textContent = d.desc[currentLang];
+      document.getElementById('heroServiceText').href = d.href;
+      const imageLink = document.getElementById('heroServiceImage');
+      imageLink.href = d.href;
+      imageLink.setAttribute('aria-label', 'View ' + d.badge[currentLang] + ' services');
+    }
+
+    function goToSlide(n) {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide]?.classList.remove('active');
+      currentSlide = (n + slides.length) % slides.length;
+      const next = slides[currentSlide];
+      if (next && next.dataset.bg && !next.style.backgroundImage) {
+        next.style.backgroundImage = 'url(' + next.dataset.bg + ')';
+      }
+      next.classList.add('active');
+      dots[currentSlide]?.classList.add('active');
+      updateHeroText();
+    }
+
+    function changeSlide(dir) {
+      goToSlide(currentSlide + dir);
+      resetTimer();
+    }
+
+    function resetTimer() {
+      clearInterval(slideTimer);
+      slideTimer = setInterval(() => goToSlide(currentSlide + 1), 6000);
+    }
+
+    function initDots() {
+      const container = document.getElementById('heroDots');
+      heroData.forEach((_, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'hero-dot' + (i === 0 ? ' active' : '');
+        btn.setAttribute('aria-label', 'Slide ' + (i+1));
+        btn.onclick = () => { goToSlide(i); resetTimer(); };
+        container.appendChild(btn);
+      });
+    }
+
+    // ===== Pages =====
+    function showHome() {
+      document.getElementById('homePage').style.display = 'block';
+      document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function navigateHomeSection(id, event) {
+      event.preventDefault();
+      showHome();
+      history.pushState(null, '', '/#' + id);
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 0);
+    }
+
+    function showPage(name) {
+      document.getElementById('homePage').style.display = 'none';
+      document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+      const page = document.getElementById(name + 'Page');
+      if (page) {
+        page.classList.add('active');
+        history.pushState(null, '', '/#' + name);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function scrollToService(id) {
+      showHome();
+      setTimeout(() => {
+        const el = document.getElementById('svc-' + id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    }
+
+    let servicePreviewPreviousFocus = null;
+    let servicePreviewPreviousOverflow = '';
+    let selectedPreviewService = '';
+
+    function openServicePreview(button) {
+      const card = button.closest('.service-card');
+      const link = card?.querySelector('.service-card-link');
+      const image = link?.querySelector('img');
+      const title = link?.querySelector('h3');
+      const description = link?.querySelector('p');
+      if (!card || !link || !image || !title || !description) {
+        console.error('Could not open service details: service card content is incomplete.');
+        return;
+      }
+
+      const overlay = document.getElementById('servicePreview');
+      servicePreviewPreviousFocus = document.activeElement;
+      servicePreviewPreviousOverflow = document.body.style.overflow;
+      selectedPreviewService = button.dataset.service;
+      document.getElementById('servicePreviewImage').src = image.src;
+      document.getElementById('servicePreviewImage').alt = image.alt;
+      document.getElementById('servicePreviewTag').textContent = card.querySelector('.service-tag')?.textContent || '';
+      document.getElementById('servicePreviewTitle').textContent = title.textContent;
+      document.getElementById('servicePreviewDescription').textContent = description.textContent;
+      document.getElementById('servicePreviewVisit').href = link.href;
+      document.getElementById('servicePreviewQuote').setAttribute('aria-label', translations[currentLang].serviceQuoteTitle);
+      overlay.querySelector('.service-preview-close').setAttribute('aria-label', translations[currentLang].servicePreviewClose);
+      overlay.classList.add('show');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      overlay.querySelector('.service-preview-close').focus();
+    }
+
+    function closeServicePreview() {
+      const overlay = document.getElementById('servicePreview');
+      if (!overlay?.classList.contains('show')) return;
+      overlay.classList.remove('show');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = servicePreviewPreviousOverflow;
+      servicePreviewPreviousFocus?.focus();
+      servicePreviewPreviousFocus = null;
+    }
+
+    document.addEventListener('click', event => {
+      if (event.target.id === 'servicePreview') closeServicePreview();
+      if (event.target.id === 'servicePreviewQuote') {
+        const service = selectedPreviewService;
+        closeServicePreview();
+        openQuote(service);
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      const overlay = document.getElementById('servicePreview');
+      if (!overlay?.classList.contains('show')) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeServicePreview();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const focusable = overlay.querySelectorAll('a[href], button:not([disabled])');
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    // ===== Quote Modal =====
+    function openQuote(service = '') {
+      document.getElementById('quoteModal').classList.add('show');
+      document.getElementById('quoteForm').style.display = 'block';
+      document.getElementById('quoteSuccess').classList.remove('show');
+      document.querySelector('#quoteForm select[name="service"]').value = service;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeQuote() {
+      document.getElementById('quoteModal').classList.remove('show');
+      document.body.style.overflow = '';
+    }
+    async function submitQuote(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = currentLang === 'nl' ? 'Verzenden...' : 'Sending...';
+
+      const data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim() || null,
+        service: form.service.value,
+        message: form.message.value.trim() || null,
+        lang: currentLang
+      };
+
+      try {
+        const res = await fetch('/api/quotes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Failed to submit');
+
+        document.getElementById('quoteForm').style.display = 'none';
+        document.getElementById('quoteSuccess').classList.add('show');
+        form.reset();
+      } catch (err) {
+        alert(currentLang === 'nl'
+          ? 'Er is iets misgegaan. Probeer het later opnieuw.'
+          : 'Something went wrong. Please try again later.');
+        console.error(err);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    }
+
+    // ===== Cookies =====
+    function acceptCookies() {
+      localStorage.setItem('cleannova_cookies', 'accepted');
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+    function declineCookies() {
+      localStorage.setItem('cleannova_cookies', 'declined');
+      document.getElementById('cookieBanner').classList.remove('show');
+    }
+
+    // ===== Mobile =====
+    function toggleMobile() {
+      const nav = document.getElementById('mobileNav');
+      const overlay = document.getElementById('mobileOverlay');
+      const button = document.querySelector('.menu-toggle');
+      if (!nav || !overlay) return;
+      const isOpen = nav.classList.toggle('show');
+      overlay.classList.toggle('show', isOpen);
+      document.body.classList.toggle('mobile-open', isOpen);
+      if (button) {
+        button.setAttribute('aria-expanded', String(isOpen));
+        button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        button.textContent = isOpen ? '×' : '☰';
+      }
+    }
+
+    // ===== Init =====
+    document.addEventListener('DOMContentLoaded', () => {
+      initDots();
+      resetTimer();
+      setLang(currentLang);
+      const linkedPage = location.hash.slice(1);
+      if (['privacy', 'cookies', 'terms'].includes(linkedPage)) showPage(linkedPage);
+      if (!localStorage.getItem('cleannova_cookies')) {
+        setTimeout(() => document.getElementById('cookieBanner').classList.add('show'), 800);
+      }
+      // Close modal on overlay click
+      document.getElementById('quoteModal').addEventListener('click', e => {
+        if (e.target === e.currentTarget) closeQuote();
+      });
+    });
+  </script>
+</body>
+</html>

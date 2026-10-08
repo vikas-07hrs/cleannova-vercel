@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <title>Professional Painting & Decorating Services | Cleannova</title>
+  <meta name="description" content="Interior and exterior painting, plastering, tiling and more — skilled tradespeople delivering exceptional finishes across Jersey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00C853; --primary-dark: #00A844; --dark: #0F172A;
+      --dark-soft: #1E293B; --text: #334155; --text-light: #64748B;
+      --bg: #F8FAFC; --white: #FFFFFF; --border: #E2E8F0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08); --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; transition: 0.2s; }
+    button, .btn { cursor: pointer; border: none; font-family: inherit; font-weight: 600; transition: 0.2s; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .top-bar { background: var(--dark); color: #94A3B8; font-size: 13px; padding: 8px 0; text-align: center; }
+    .top-bar span { color: var(--primary); }
+    header { position: sticky; top: 0; z-index: 100; background: var(--white); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 22px; color: var(--dark); }
+    .logo-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--primary), #00E676); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 18px; }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { padding: 6px 8px; font-size: 12.5px; font-weight: 500; color: var(--dark); border-radius: 6px; white-space: nowrap !important; display: inline-block; }
+    nav a:hover, nav a.active { background: var(--bg); color: var(--primary-dark); }
+    .header-actions { display: flex; align-items: center; gap: 16px; }
+    .phone { font-weight: 600; font-size: 14px; color: var(--dark); }
+    .phone:hover { color: var(--primary); }
+    .lang-switch { display: flex; gap: 4px; font-size: 13px; font-weight: 600; }
+    .lang-switch button { background: none; padding: 4px 8px; border-radius: 4px; color: var(--text-light); border: none; cursor: pointer; font-weight: 600; font-family: inherit; }
+    .lang-switch button.active { background: var(--bg); color: var(--primary); }
+    .btn-primary { background: var(--primary); color: white; padding: 10px 20px; border-radius: 8px; font-size: 14px; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-white { background: white; color: var(--dark); padding: 12px 24px; border-radius: 8px; font-size: 15px; }
+    .btn-outline { background: transparent; color: white; border: 2px solid white; padding: 12px 24px; border-radius: 8px; font-size: 15px; }
+    .btn-outline:hover { background: white; color: var(--dark); }
+    .menu-toggle { display: none; background: none; font-size: 24px; color: var(--dark); padding: 8px; }
+    @media (max-width: 1280px) { nav, .phone { display: none; } .menu-toggle { display: block; } }
+
+    .page-hero { position: relative; height: 420px; background: #1a1a2e; overflow: hidden; }
+    .page-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.45; }
+    .page-hero-content { position: absolute; inset: 0; display: flex; align-items: center; }
+    .page-hero-text { color: white; max-width: 640px; }
+    .page-hero .badge { display: inline-block; background: var(--primary); color: white; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; text-transform: uppercase; margin-bottom: 16px; }
+    .page-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+    .page-hero p { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.9); }
+    .breadcrumb a:hover { color: var(--primary); }
+
+    .content-section { padding: 70px 0; }
+    .content-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: start; }
+    @media (max-width: 768px) { .content-grid { grid-template-columns: 1fr; } }
+    .section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .section-label::before { content: ''; width: 24px; height: 2px; background: var(--primary); }
+    .section-title { font-size: clamp(24px, 3vw, 32px); font-weight: 800; color: var(--dark); margin-bottom: 16px; }
+    .feature-list { list-style: none; margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 560px) { .feature-list { grid-template-columns: 1fr; } }
+    .feature-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; }
+    .feature-list li::before { content: '✓'; background: var(--primary); color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+
+    .side-card { background: var(--bg); border-radius: var(--radius); padding: 28px; position: sticky; top: 90px; }
+    .side-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+    .side-card p { font-size: 14px; color: var(--text-light); margin-bottom: 20px; }
+    .side-card .btn-primary { width: 100%; padding: 14px; font-size: 15px; text-align: center; display: block; }
+    .side-card .phone-big { display: block; text-align: center; margin-top: 14px; font-weight: 600; color: var(--dark); font-size: 16px; }
+    .side-card .phone-big:hover { color: var(--primary); }
+
+    .cta { padding: 80px 0; background: var(--dark-soft); text-align: center; color: white; }
+    .cta h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 800; margin-bottom: 20px; }
+
+    footer { background: var(--dark); color: #94A3B8; padding: 48px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 36px; }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    .footer-brand .logo { color: white; margin-bottom: 12px; }
+    .footer-brand p { font-size: 14px; max-width: 260px; }
+    .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; }
+    .footer-col a { display: block; font-size: 14px; margin-bottom: 8px; color: #94A3B8; }
+    .footer-col a:hover { color: var(--primary); }
+    .footer-bottom { border-top: 1px solid #1E293B; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+    .footer-bottom a { color: #94A3B8; margin-left: 12px; }
+    .footer-bottom a:hover { color: var(--primary); }
+
+    .modal-overlay { position: fixed; inset: 0; background: rgba(15,23,42,0.6); z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px); }
+    .modal-overlay.show { display: flex; }
+    .modal { background: white; border-radius: 16px; padding: 36px; max-width: 480px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+    .modal h3 { font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+    .modal p { font-size: 14px; color: var(--text-light); margin-bottom: 20px; }
+    .modal-close { position: absolute; top: 12px; right: 12px; background: var(--bg); font-size: 22px; color: var(--dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); z-index: 10; }
+    .modal-close:hover { background: #fee2e2; color: #dc2626; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 5px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+    .form-consent { display: flex; gap: 8px; font-size: 13px; color: var(--text-light); margin-bottom: 16px; }
+    .form-success { display: none; text-align: center; padding: 20px 0; }
+    .form-success.show { display: block; }
+    .form-success .icon { width: 56px; height: 56px; background: #DCFCE7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 28px; color: var(--primary); }
+
+    @media (max-width: 1280px) {
+      .container { padding: 0 16px; }
+      .header-inner { height: 60px; gap: 8px; }
+      .logo { font-size: 18px; }
+      .logo-icon { width: 36px; height: 36px; font-size: 15px; }
+      nav, .phone { display: none !important; }
+      .mobile-home { display: inline-block !important; }
+      .menu-toggle { display: none !important; }
+      .btn-primary { padding: 8px 12px; font-size: 12px; }
+      .page-hero { height: auto; min-height: 360px; }
+      .page-hero-content { padding: 32px 0; }
+      .page-hero h1 { font-size: 24px !important; }
+      .page-hero p { font-size: 14px; }
+      .page-hero .btn-white, .page-hero .btn-outline { padding: 10px 14px; font-size: 13px; }
+      .content-section { padding: 40px 0; }
+      .content-grid { grid-template-columns: 1fr !important; gap: 24px; }
+      .feature-list { grid-template-columns: 1fr !important; }
+      .side-card { position: static; }
+      .cta { padding: 40px 0; }
+      .cta h2 { font-size: 20px !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 20px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .modal { padding: 20px 14px; margin: 10px; max-height: 90vh; overflow-y: auto; }
+    }
+
+
+    body { font-size: 16px !important; }
+    nav a { font-size: 15px !important; padding: 8px 12px !important; white-space: nowrap !important; }
+    .page-hero h1 { font-size: clamp(28px, 5vw, 40px) !important; }
+    .page-hero p { font-size: 17px !important; }
+    .section-title { font-size: clamp(26px, 3vw, 34px) !important; }
+    .feature-list li { font-size: 16px !important; }
+    .side-card h3 { font-size: 20px !important; }
+    .side-card p { font-size: 15px !important; }
+    .btn-primary { font-size: 15px !important; padding: 12px 18px !important; }
+    .cta h2 { font-size: clamp(24px, 4vw, 36px) !important; }
+    @media (max-width: 1280px) {
+      nav { display: none !important; }
+      .phone { display: none !important; }
+      .mobile-home { display: inline-block !important; font-size: 15px !important; }
+    }
+
+  </style>
+  <link rel="stylesheet" href="/css/modern-glass.css?v=20261008v8">
+  <script src="/js/modern-ui.js?v=20261008v7" defer></script>
+</head>
+<body>
+  <div class="top-bar"><span>Jersey's trusted property &amp; home services specialists since 1994</span></div>
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo"><div class="logo-icon">C</div> Cleannova</a>
+      <nav>
+        <a href="/dry-cleaning.html" class="" data-nav="navDry">Dry Clean</a>
+        <a href="/home-cleaning.html" class="" data-nav="navHome">Home Clean</a>
+        <a href="/maintenance.html" class="" data-nav="navMaint">Maintenance</a>
+        <a href="/electrical.html" class="" data-nav="navElec">Electrical</a>
+        <a href="/plumbing.html" class="" data-nav="navPlumb">Plumbing</a>
+        <a href="/decorating.html" class="active" data-nav="navDeco">Decorating</a>
+      </nav>
+      <a href="/" class="mobile-home" style="display:none;font-weight:600;font-size:13px;color:var(--dark);padding:6px 10px;">← Home</a>
+      <div class="header-actions">
+        <div class="lang-switch">
+          <button type="button" class="active" id="langEn" onclick="setLang('en')">EN</button>
+          <button type="button" id="langNl" onclick="setLang('nl')">NL</button>
+        </div>
+
+        <a href="tel:+441534499429" class="phone" style="white-space:nowrap">📞&nbsp;01534&nbsp;499429</a>
+        <button class="btn-primary" onclick="openQuote()" id="i18n-freeQuote">FREE QUOTE</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <a class="page-hero-image-link" href="/#svc-deco" aria-label="Decorating service on the homepage"><img src="/images/service-decorating.jpg" alt="Painting and decorating work"></a>
+    <div class="page-hero-content">
+      <div class="container">
+        <div class="page-hero-text">
+          <div class="breadcrumb"><a href="/">Home</a> · <a href="/#services">Services</a> · Decorating</div>
+          <div class="badge" id="i18n-tag">Decorating</div>
+          <h1 id="i18n-title">Professional Painting & Decorating Services</h1>
+          <p id="i18n-desc">Interior and exterior painting, plastering, tiling and more — skilled tradespeople delivering exceptional finishes across Jersey.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn-white i18n-quote" onclick="openQuote()">Get a Free Quote</button>
+            <a href="tel:+441534499429" class="btn-outline" id="i18n-call">Call 01534 499429</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <div class="section-label" id="i18n-offer">What we offer</div>
+          <h2 class="section-title" id="i18n-included">What's included</h2>
+          <p style="color:var(--text-light);margin-bottom:8px">Interior and exterior painting, plastering, tiling and more — skilled tradespeople delivering exceptional finishes across Jersey.</p>
+          <ul class="feature-list" id="i18n-features">
+            <li>Interior painting & decorating</li>
+            <li>Exterior painting & weatherproofing</li>
+            <li>Plastering & skimming</li>
+            <li>Tiling (walls & floors)</li>
+            <li>Flooring installation</li>
+            <li>Carpentry & joinery</li>
+            <li>Colour consultation</li>
+            <li>Residential & commercial projects</li>
+          </ul>
+        </div>
+        <div>
+          <div class="side-card">
+            <h3 id="i18n-sideTitle">Request a free quote</h3>
+            <p id="i18n-sideDesc">No obligation. We'll get back to you within 24 hours.</p>
+            <button class="btn-primary i18n-quote" onclick="openQuote()">Get Free Quote</button>
+            <a href="tel:+441534499429" class="phone-big">📞 01534 499429</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2 id="i18n-ready">Ready to get started?</h2>
+      <button class="btn-primary" style="padding:14px 32px;font-size:16px" onclick="openQuote()" id="i18n-contact">CONTACT US TODAY</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><div class="logo-icon">C</div> Cleannova</a>
+          <p>Jersey's trusted property and home services specialist since 1994.</p>
+          <a href="/" aria-label="Cleannova home"><img class="footer-illustration" src="/images/cleannova-home-interior.jpg" alt="A bright, well-kept European home interior" width="320" height="160" loading="lazy"></a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="/dry-cleaning.html" data-nav="navDry">Dry Clean</a>
+          <a href="/home-cleaning.html" data-nav="navHome">Home Clean</a>
+          <a href="/maintenance.html" data-nav="navMaint">Maintenance</a>
+          <a href="/electrical.html" data-nav="navElec">Electrical</a>
+          <a href="/plumbing.html" data-nav="navPlumb">Plumbing</a>
+          <a href="/decorating.html" data-nav="navDeco">Decorating</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/#about">About Us</a>
+          <a href="/#contact">Contact Us</a>
+          <a href="/#privacy">Privacy Policy</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+441534499429">01534 499429</a>
+          <a href="mailto:info@cleannova.com">info@cleannova.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Cleannova. All rights reserved. · Design by <a href="https://rakpal.com" target="_blank" rel="noopener" style="color:var(--primary)">Rakpal.com</a></span>
+        <div>
+          <a href="/#privacy">Privacy</a>
+          <a href="/#cookies">Cookies</a>
+          <a href="/#terms">T&amp;Cs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="quoteModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeQuote()" aria-label="Close">×</button>
+      <div id="quoteForm">
+        <h3>Request a Free Quote</h3>
+        <p>Fill in the form and we'll get back to you within 24 hours. No obligation.</p>
+        <form onsubmit="submitQuote(event)">
+          <div class="form-group"><label>Full Name *</label><input type="text" required name="name" placeholder="John Smith"></div>
+          <div class="form-group"><label>Email *</label><input type="email" required name="email" placeholder="john@example.com"></div>
+          <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="01534 000000"></div>
+          <div class="form-group">
+            <label>Service *</label>
+            <select name="service" required>
+              <option value="dry">Dry Cleaning</option>
+              <option value="home">Home Cleaning</option>
+              <option value="maint">Maintenance</option>
+              <option value="elec">Electrical</option>
+              <option value="plumb">Plumbing</option>
+              <option value="deco">Decorating</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell us about your requirements…"></textarea></div>
+          <div class="form-consent">
+            <input type="checkbox" required id="consentCheck">
+            <label for="consentCheck">I agree to the processing of my data as described in the Privacy Policy.</label>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button type="button" onclick="closeQuote()" style="flex:1;padding:14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-weight:600;cursor:pointer">Cancel</button>
+            <button type="submit" class="btn-primary" style="flex:2;padding:14px">Send Request</button>
+          </div>
+        </form>
+      </div>
+      <div class="form-success" id="quoteSuccess">
+        <div class="icon">✓</div>
+        <h3>Thank you!</h3>
+        <p>We've received your request and will contact you within 24 hours.</p>
+        <button class="btn-primary" style="margin-top:16px" onclick="closeQuote()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('select[name="service"]').value = 'deco';
+    function openQuote() {
+      document.getElementById('quoteModal').classList.add('show');
+      document.getElementById('quoteForm').style.display = 'block';
+      document.getElementById('quoteSuccess').classList.remove('show');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeQuote() {
+      document.getElementById('quoteModal').classList.remove('show');
+      document.body.style.overflow = '';
+    }
+    async function submitQuote(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = 'Sending...';
+      try {
+        const res = await fetch('/api/quotes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            phone: form.phone.value.trim() || null,
+            service: form.service.value,
+            message: form.message.value.trim() || null,
+            lang: 'en'
+          })
+        });
+        if (!res.ok) throw new Error('fail');
+        document.getElementById('quoteForm').style.display = 'none';
+        document.getElementById('quoteSuccess').classList.add('show');
+        form.reset();
+      } catch (err) {
+        alert('Something went wrong. Please try again.');
+      } finally {
+        btn.disabled = false; btn.textContent = 'Send Request';
+      }
+    }
+    document.getElementById('quoteModal').addEventListener('click', e => {
+      if (e.target === e.currentTarget) closeQuote();
+    });
+  </script>
+
+<script>
+(function() {
+  const T = {
+    en: {
+      tag: 'Decorating',
+      title: 'Professional Painting & Decorating Services',
+      desc: 'Interior and exterior painting, plastering, tiling and more — skilled tradespeople delivering exceptional finishes across Jersey.',
+      offerLabel: 'What we offer',
+      included: "What's included",
+      features: ['Interior painting & decorating', 'Exterior painting & weatherproofing', 'Plastering & skimming', 'Tiling (walls & floors)', 'Flooring installation', 'Carpentry & joinery', 'Colour consultation', 'Residential & commercial projects'],
+      quote: 'Get a Free Quote',
+      freeQuote: 'FREE QUOTE',
+      call: 'Call 01534 499429',
+      sideTitle: 'Request a free quote',
+      sideDesc: "No obligation. We'll get back to you within 24 hours.",
+      ready: 'Ready to get started?',
+      contact: 'CONTACT US TODAY',
+      navDry: 'Dry Clean',
+      navHome: 'Home Clean',
+      navMaint: 'Maintenance',
+      navElec: 'Electrical',
+      navPlumb: 'Plumbing',
+      navDeco: 'Decorating'
+    },
+    nl: {
+      tag: 'Schilderen',
+      title: 'Professioneel Schilderen & Decoratie',
+      desc: 'Interieur- en exterieurschilderwerk, stucwerk, tegels en meer — vakmensen met uitzonderlijke afwerking in Jersey.',
+      offerLabel: 'Wat wij bieden',
+      included: 'Wat is inbegrepen',
+      features: ['Binnenschilderwerk', 'Buitenschilderwerk', 'Stucwerk', 'Tegels (wand & vloer)', 'Vloeren leggen', 'Timmerwerk', 'Kleuradvies', 'Woning & bedrijf'],
+      quote: 'Gratis Offerte',
+      freeQuote: 'OFFERTE',
+      call: 'Bel 01534 499429',
+      sideTitle: 'Vraag een gratis offerte',
+      sideDesc: 'Vrijblijvend. Wij reageren binnen 24 uur.',
+      ready: 'Klaar om te beginnen?',
+      contact: 'NEEM CONTACT OP',
+      navDry: 'Stomerij',
+      navHome: 'Reiniging',
+      navMaint: 'Onderhoud',
+      navElec: 'Elektriciteit',
+      navPlumb: 'Loodgieterij',
+      navDeco: 'Schilderen'
+    }
+  };
+
+  function setLang(lang) {
+    if (!T[lang]) lang = 'en';
+    localStorage.setItem('cleannova_lang', lang);
+    document.documentElement.lang = lang;
+    document.body.classList.toggle('lang-nl', lang === 'nl');
+    const enBtn = document.getElementById('langEn');
+    const nlBtn = document.getElementById('langNl');
+    if (enBtn) enBtn.classList.toggle('active', lang === 'en');
+    if (nlBtn) nlBtn.classList.toggle('active', lang === 'nl');
+    const t = T[lang];
+
+    const map = {
+      'i18n-tag': t.tag,
+      'i18n-title': t.title,
+      'i18n-desc': t.desc,
+      'i18n-offer': t.offerLabel,
+      'i18n-included': t.included,
+      'i18n-quote': t.quote,
+      'i18n-freeQuote': t.freeQuote,
+      'i18n-call': t.call,
+      'i18n-sideTitle': t.sideTitle,
+      'i18n-sideDesc': t.sideDesc,
+      'i18n-ready': t.ready,
+      'i18n-contact': t.contact
+    };
+    Object.keys(map).forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = map[id];
+    });
+    document.querySelectorAll('.i18n-quote').forEach(el => { el.textContent = t.quote;
+    });
+    // Nav links
+    document.querySelectorAll('[data-nav]').forEach(el => {
+      const k = el.getAttribute('data-nav');
+      if (t[k]) el.textContent = t[k];
+    });
+    // Features list
+    const fl = document.getElementById('i18n-features');
+    if (fl && t.features) {
+      fl.innerHTML = t.features.map(f => '<li>' + f + '</li>').join('');
+    }
+  }
+  window.setLang = setLang;
+  document.addEventListener('DOMContentLoaded', () => {
+    setLang(localStorage.getItem('cleannova_lang') || 'en');
+  });
+})();
+</script>
+
+</body>
+</html>

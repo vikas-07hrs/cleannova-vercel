@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="520" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">A calm, well-kept home</title>
+  <desc id="desc">Illustration of a bright European home interior with a window, sofa, plant and neatly arranged cushions.</desc>
+  <rect width="720" height="520" rx="28" fill="#e8f0ed"/>
+  <circle cx="575" cy="98" r="54" fill="#d5e5df"/>
+  <path d="M0 365h720v155H0z" fill="#d9e4df"/>
+  <path d="M55 48h274v239H55z" fill="#fff" stroke="#d9e4df" stroke-width="8"/>
+  <path d="M73 66h238v205H73z" fill="#d9ecea"/>
+  <path d="M188 66v205M73 166h238" stroke="#fff" stroke-width="12"/>
+  <path d="M82 258c36-56 69-40 101-2 34-45 75-44 120 15H82z" fill="#a9cfbf"/>
+  <path d="M82 258c44-39 81-15 112 13 37-34 71-27 109 0v14H82z" fill="#77aa97"/>
+  <path d="M78 370h364v90H78z" fill="#123c46"/>
+  <path d="M95 338h328c21 0 38 17 38 38v49H78v-49c0-21 17-38 38-38z" fill="#2f6e70"/>
+  <path d="M120 303h120c24 0 43 19 43 43v14H104v-38c0-11 7-19 16-19z" fill="#3b8580"/>
+  <path d="M295 303h104c24 0 43 19 43 43v14H278v-38c0-11 7-19 17-19z" fill="#3b8580"/>
+  <path d="M115 460l-15 42M407 460l17 42" stroke="#123c46" stroke-width="12" stroke-linecap="round"/>
+  <rect x="151" y="360" width="89" height="70" rx="18" fill="#eef4f2"/>
+  <path d="M167 383h57M167 399h41" stroke="#9bbab0" stroke-width="7" stroke-linecap="round"/>
+  <path d="M542 327h115v139H542z" fill="#d2dfd9"/>
+  <path d="M524 319h151v19H524z" fill="#b8c9c1"/>
+  <path d="M558 466l-9 35M644 466l9 35" stroke="#8ba79a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M532 311c-4-55 9-98 39-128 1 44-8 81-27 112 23-58 57-92 102-104-11 51-40 87-88 109 36-11 67-9 94 8-42 23-82 24-120 3z" fill="#438575"/>
+  <path d="M578 312c-1-49-9-89-22-122" stroke="#8d684a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M469 285h46v60h-46z" fill="#d8b88d"/>
+  <path d="M464 278h56v13h-56z" fill="#c8a779"/>
+  <path d="M476 264c7-21 25-21 32 0" fill="none" stroke="#8bb9a7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M488 259c-16-17-13-36 1-47 15 17 13 33-1 47zM505 270c2-24 16-36 33-32-1 22-13 34-33 32zM477 274c-22-10-28-26-18-41 21 10 28 23 18 41z" fill="#5c9a80"/>
+</svg>
